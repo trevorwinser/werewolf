@@ -1,0 +1,2 @@
+$execute positioned $(Pos) rotated $(rotation) 0 positioned ^ ^ ^-0.45 run summon text_display ~ ~ ~ {Tags:["config"],Rotation:[$(rotation)f,0f],view_range:20f,billboard:"fixed",shadow:0b,see_through:0b,alignment:"center",text:"-",background:16777215}
+$execute positioned $(Pos) rotated $(rotation) 0 positioned ^ ^ ^-0.45 run summon interaction ~ ~ ~ {Tags:["config"],data:{condition:"entity @s",operation:"remove",path:"$(path)",value:1},width:0.2,height:0.2}

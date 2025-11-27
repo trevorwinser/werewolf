@@ -1,0 +1,1 @@
+function w:sound/play_all {sound:"minecraft:block.note_block.didgeridoo",volume:1,pitch:0.5}

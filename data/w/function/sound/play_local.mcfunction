@@ -1,0 +1,1 @@
+$playsound $(sound) neutral @a ~ ~ ~ $(volume) $(pitch)

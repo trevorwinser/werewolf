@@ -1,0 +1,2 @@
+$execute as @n[nbt={data:{path:"$(path)"}},type=item_display] if score $(path) storage matches 1 run data modify entity @s transformation.scale set from entity @s data.big
+$execute as @n[nbt={data:{path:"$(path)"}},type=item_display] if score $(path) storage matches 0 run data modify entity @s transformation.scale set from entity @s data.small

@@ -1,0 +1,1 @@
+$execute at @s run playsound $(sound) neutral @s ~ ~ ~ $(volume) $(pitch)

@@ -1,0 +1,1 @@
+execute positioned -2 72 4 as @r[distance=..0.8] run advancement grant @s through w:secret/nice_view

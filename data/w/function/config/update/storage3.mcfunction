@@ -1,0 +1,1 @@
+$execute store result score $(section).$(name) storage run data get storage w:config $(section).$(name) 1

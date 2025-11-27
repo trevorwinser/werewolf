@@ -1,0 +1,4 @@
+$execute at @s as @n[nbt={data:{path:"$(path)"}},type=item_display] run data modify entity @s transformation.scale set from entity @s data.small
+$execute at @s as @n[nbt={data:{path:"$(path)",value:$(value)}},type=item_display] if score $(path) storage matches $(value) run data modify entity @s transformation.scale set from entity @s data.big
+$execute at @s as @n[nbt={data:{path:"$(path)"}},type=text_display] run data modify entity @s text.color set value red
+$execute at @s as @n[nbt={data:{path:"$(path)",value:$(value)}},type=text_display] if score $(path) storage matches $(value) run data modify entity @s text.color set value green

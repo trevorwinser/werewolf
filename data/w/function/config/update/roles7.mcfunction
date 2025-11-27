@@ -1,0 +1,1 @@
+$execute positioned $(Pos) rotated $(rotation) 0 positioned ^ ^ ^-0.45 run tag @e[distance=..0.1] add role_list_remove

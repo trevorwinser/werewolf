@@ -1,0 +1,2 @@
+$execute as @n[nbt={data:{path:"$(path)"}},type=text_display] if score $(path) storage matches 1 run data modify entity @s text.color set value green
+$execute as @n[nbt={data:{path:"$(path)"}},type=text_display] if score $(path) storage matches 0 run data modify entity @s text.color set value red

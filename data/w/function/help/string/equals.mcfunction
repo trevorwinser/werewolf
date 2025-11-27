@@ -1,0 +1,1 @@
+return run function w:help/string/equals_macro with storage w:temp
