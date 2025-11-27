@@ -1,3 +1,4 @@
+execute unless entity @e[tag=role_list] run return fail
 $execute unless data storage w:config role.available[$(start)] run return fail
 data modify storage w:temp source set value "w:temp"
 data modify storage w:temp path set value "string1"

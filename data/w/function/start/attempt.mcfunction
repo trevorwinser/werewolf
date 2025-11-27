@@ -6,4 +6,4 @@ execute if score playing game matches ..3 run function w:start/not_enough_player
 execute if score playing game matches ..3 run return fail
 execute if score role.amount storage < playing game run function w:start/not_enough_roles
 execute if score role.amount storage < playing game run return fail
-function w:start/start
+schedule function w:start/start 1t

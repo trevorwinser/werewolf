@@ -17,3 +17,5 @@ scoreboard players set 20 timer 20
 
 difficulty peaceful
 function w:config/load
+data remove storage w:temp for_loop
+data remove storage w:temp inner_for_loop

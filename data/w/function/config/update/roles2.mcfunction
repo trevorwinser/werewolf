@@ -8,5 +8,3 @@ data modify storage w:temp inner_for_loop.start set value 0
 data modify storage w:temp inner_for_loop.step set value 1
 function w:config/update/roles3 with storage w:temp inner_for_loop
 function w:help/inner_for_loop/start with storage w:temp inner_for_loop
-
-say CUNT

@@ -1,5 +1,5 @@
 #data modify storage w:config role.available append from storage w:temp inner_for_loop.name
-$say $(start) $(name) $(type) $(display) $(end)
+#$say $(start) $(name) $(type) $(display) $(end)
 execute if data storage w:temp inner_for_loop{type:"town"} if score role.townamount storage matches 10 run return fail
 execute if data storage w:temp inner_for_loop{type:"town"} if score role.cultamount storage matches 5 run return fail
 execute if data storage w:temp inner_for_loop{type:"town"} run scoreboard players add role.townamount storage 1
