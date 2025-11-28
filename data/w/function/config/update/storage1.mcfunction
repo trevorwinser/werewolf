@@ -7,3 +7,4 @@ execute store result score temp storage run data get storage w:config role.list
 scoreboard players remove temp storage 1
 execute store result storage w:temp for_loop.end int 1 run scoreboard players get temp storage
 function w:help/for_loop/start with storage w:temp for_loop
+

@@ -4,6 +4,7 @@ execute store result score end for_loop run data get storage w:temp for_loop.end
 execute if score start for_loop > end for_loop run return 0
 $$(command)
 scoreboard players add i storage 1
+scoreboard players add iterations storage 1
 execute store result score step for_loop run data get storage w:temp for_loop.step
 execute unless data storage w:temp for_loop{skip_increment:true} run scoreboard players operation start for_loop += step for_loop
 data remove storage w:temp for_loop.skip_increment

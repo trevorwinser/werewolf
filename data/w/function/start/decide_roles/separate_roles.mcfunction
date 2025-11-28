@@ -1,0 +1,6 @@
+$data modify storage w:temp temp_role set from storage w:temp role.list[$(start)]
+execute unless data storage w:temp temp_role{name:"anytown"} if data storage w:temp temp_role{type:"town"} run data modify storage w:temp role.town append from storage w:temp temp_role
+execute unless data storage w:temp temp_role{name:"anyneutral"} if data storage w:temp temp_role{type:"neutral"} run data modify storage w:temp role.neutral append from storage w:temp temp_role
+execute unless data storage w:temp temp_role{name:"anycult"} if data storage w:temp temp_role{type:"cult"} run data modify storage w:temp role.cult append from storage w:temp temp_role
+execute unless data storage w:temp temp_role{name:"anyindividual"} if data storage w:temp temp_role{type:"individual"} run data modify storage w:temp role.individual append from storage w:temp temp_role
+execute unless data storage w:temp temp_role{name:"any"} unless data storage w:temp temp_role{name:"anytown"} unless data storage w:temp temp_role{name:"anyneutral"} unless data storage w:temp temp_role{name:"anycult"} unless data storage w:temp temp_role{name:"anyindividual"} run data modify storage w:temp role.any append from storage w:temp temp_role

@@ -1,0 +1,3 @@
+$function w:start/help/set_temp_role {location:"role.available",index:$(start)}
+$function w:start/help/remove_role {location:"role.available",index:$(start)}
+execute unless data storage w:temp temp_role{name:"any"} unless data storage w:temp temp_role{name:"anytown"} unless data storage w:temp temp_role{name:"anyneutral"} unless data storage w:temp temp_role{name:"anycult"} unless data storage w:temp temp_role{name:"anyindividual"} run return run function w:start/help/add_role with storage w:temp

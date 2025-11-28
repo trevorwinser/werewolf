@@ -5,7 +5,9 @@ data modify storage w:config role.available set value []
 data modify storage w:config role.display.text set value ""
 scoreboard players set role.amount storage 0
 scoreboard players set role.townamount storage 0
+scoreboard players set role.neutralamount storage 0
 scoreboard players set role.cultamount storage 0
+scoreboard players set role.individualamount storage 0
 
 data modify storage w:temp for_loop.command set value "function w:config/update/roles2 with storage w:temp for_loop"
 data modify storage w:temp for_loop.start set value 0

@@ -1,9 +1,4 @@
-team add temp
-team join temp @a
-execute store result score playing game run team list temp
-team remove temp
-execute if score playing game matches ..3 run function w:start/not_enough_players
-execute if score playing game matches ..3 run return fail
-execute if score role.amount storage < playing game run function w:start/not_enough_roles
-execute if score role.amount storage < playing game run return fail
+execute if score total online matches ..3 run title @a subtitle "You must have 4+ players to start!"
+execute if score total online matches ..3 run return run function w:start/fail1
+
 schedule function w:start/start 1t

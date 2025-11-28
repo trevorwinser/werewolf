@@ -1,0 +1,1 @@
+return run execute if score role.$(name) storage matches 0

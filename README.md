@@ -118,8 +118,53 @@ Indoctrinate or eliminate all who do not follow the Cult.
 ---
 Fall Guy
 Abilities:
-Take the place of one of your fellow cult members at night.
+Attempt to take the place of one of your fellow cult members at night.
 Attributes:
 Any action done onto your selected fellow will be put onto you anonymously.
+Your action starts at a 50% success rate.
+Each night you succeed it drops by 25% and each night you fail it increases by 25%.
 Goal:
 Indoctrinate or eliminate all who do not follow the Cult.
+
+## Neutral
+
+Jester
+Abilities:
+
+Attributes:
+Goal:
+Be eliminated and haunt 
+---
+
+---
+Abilities:
+Attributes:
+Goal:
+---
+Abilities:
+Attributes:
+Goal:
+---
+Abilities:
+Attributes:
+Goal:
+---
+Abilities:
+Attributes:
+Goal:
+---
+Abilities:
+Attributes:
+Goal:
+---
+
+
+## Evil Individual
+Sabotager
+Abilities:
+Trick the Town into voting out your target.
+Attributes:
+Your target is always a Town member.
+If your target is eliminated at night you will become a Jester.
+Goal: 
+Get your target voted out at any cost.

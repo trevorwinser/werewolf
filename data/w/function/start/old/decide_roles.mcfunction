@@ -12,3 +12,5 @@ execute store result storage w:temp roll int 1 run function w:help/roll/get with
 function w:start/assign_role with storage w:temp
 
 #Display role
+title @a title "Your role is..."
+execute as @a run function 
