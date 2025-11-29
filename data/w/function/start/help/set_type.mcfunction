@@ -1,0 +1,1 @@
+$data modify storage w:temp type set from storage w:temp types[$(index)]

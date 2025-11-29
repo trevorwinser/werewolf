@@ -32,7 +32,7 @@ data modify storage w:temp for_loop.step set value 1
 execute store result storage w:temp for_loop.end int 1 run scoreboard players get role.amount storage
 scoreboard players set temp storage 276
 
-execute if entity @e[nbt={text:{text:"Roles"},data:{type:"text"}}] positioned 29.95 0 4.0 run tag @n[type=text_display,distance=..0.1] add role_list
+execute if entity @e[nbt={text:{text:"Roles"},data:{type:"text"}}] positioned 29.95 0 4.2 run tag @n[type=text_display,distance=..0.1] add role_list
 data modify entity @n[tag=role_list] text.text set string storage w:config role.display.text
 function w:help/for_loop/start with storage w:temp for_loop
 

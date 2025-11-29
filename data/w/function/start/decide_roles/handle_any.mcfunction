@@ -2,5 +2,8 @@ data modify storage w:temp for_loop.command set value "function w:start/help/add
 data modify storage w:temp for_loop.start set value 0
 data modify storage w:temp for_loop.step set value 1
 $data modify storage w:temp for_loop.type set value "$(type)"
-$execute store result storage w:temp for_loop.end int 1 run scoreboard players remove role.any$(type) storage 1
+$execute unless data storage w:temp for_loop{type:"any"} run scoreboard players operation temp storage = role.any$(type) storage
+execute if data storage w:temp for_loop{type:"any"} run scoreboard players operation temp storage = role.any storage
+execute store result storage w:temp for_loop.end int 1 run scoreboard players remove temp storage 1
 function w:help/for_loop/start with storage w:temp for_loop
+$function w:start/help/for_each_role_list {command:"function w:start/help/for_each_role_available with storage w:temp for_loop",value:"",inner_for_loop_command:"function w:start/decide_roles/remove_duplicate with storage w:temp inner_for_loop",inner_for_loop_value:"$(type)"}
