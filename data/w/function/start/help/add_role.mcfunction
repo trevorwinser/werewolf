@@ -1,2 +1,2 @@
-#$say adding role $(list) $(temp_role)
-$return run data modify storage w:temp role.$(list) append value $(temp_role)
+#$say adding role $(location) $(temp_role)
+$return run data modify storage w:temp $(location) append value $(temp_role)

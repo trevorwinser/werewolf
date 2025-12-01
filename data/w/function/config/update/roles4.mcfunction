@@ -1,13 +1,15 @@
 #data modify storage w:config role.available append from storage w:temp inner_for_loop.name
 #$say $(start) $(name) $(type) $(display) $(end)
-execute if data storage w:temp inner_for_loop{type:"town"} if score role.townamount storage matches 9.. run return run say "Not possible"
-execute if data storage w:temp inner_for_loop{type:"neutral"} if score role.neutralamount storage matches 1.. run return run say "Not possible"
-execute if data storage w:temp inner_for_loop{type:"cult"} if score role.individualamount storage matches 2.. run return run say "Not possible"
-execute if data storage w:temp inner_for_loop{type:"individual"} if score role.cultamount storage matches 5.. run return run say "Not possible"
+execute store result score role.amount storage run data get storage w:config role.available
+execute if score role.amount storage matches 11.. run return run say "Not possible"
+
+execute if data storage w:temp inner_for_loop{type:"town"} if score role.townamount storage matches 9.. run return 0
+execute if data storage w:temp inner_for_loop{type:"neutral"} if score role.neutralamount storage matches 1.. run return 0
+execute if data storage w:temp inner_for_loop{type:"cult"} if score role.individualamount storage matches 2.. run return 0
+execute if data storage w:temp inner_for_loop{type:"individual"} if score role.cultamount storage matches 5.. run return 0
 execute if data storage w:temp inner_for_loop{type:"town"} run scoreboard players add role.townamount storage 1
 execute if data storage w:temp inner_for_loop{type:"neutral"} run scoreboard players add role.neutralamount storage 1
 execute if data storage w:temp inner_for_loop{type:"cult"} run scoreboard players add role.cultamount storage 1
-execute if data storage w:temp inner_for_loop{type:"individual"} run scoreboard players add role.individualamount storage 1
 
 data remove storage w:temp temp_role
 $data modify storage w:temp temp_role.name set value "$(name)"

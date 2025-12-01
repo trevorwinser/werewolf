@@ -1,1 +1,1 @@
-$say $(text)
+$tellraw @a {text:'$(text)'}

@@ -1,5 +1,3 @@
-execute as @a run scoreboard players add players max 1
-
 execute store result score tick timer run time query gametime
 execute store result score daytime timer run time query daytime
 scoreboard players operation tick timer %= 20 timer
@@ -21,5 +19,3 @@ execute if score start game matches 1 if score total online matches 1 run tag @a
 execute if score start game matches 0 run function w:config/tick
 execute if score start game matches 1 run function w:game/tick
 function w:advancement/tick
-
-scoreboard players set players max 0

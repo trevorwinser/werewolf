@@ -1,0 +1,1 @@
+$scoreboard players add role.$(type)amount storage 1

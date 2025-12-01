@@ -4,7 +4,7 @@
 
 function w:start/decide_roles/load
 
-function w:start/assign_roles/load
+#function w:start/assign_roles/load
 
 function w:start/display_roles/load
 

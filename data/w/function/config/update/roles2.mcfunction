@@ -1,6 +1,5 @@
 execute store result score role.amount storage run data get storage w:config role.available
-execute if score role.amount storage matches 11.. run say HOW
-execute if score role.amount storage matches 11.. run return fail
+execute if score role.amount storage matches 11.. run return 0
 $data modify storage w:temp inner_for_loop.type set from storage w:config role.list[$(start)].type
 $data modify storage w:temp inner_for_loop.name set from storage w:config role.list[$(start)].name
 $data modify storage w:temp inner_for_loop.display set from storage w:config role.list[$(start)].display
