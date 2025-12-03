@@ -1,1 +1,1 @@
-$data modify storage w:temp type set from storage w:temp types[$(index)]
+$data modify storage w:temp type set from storage w:temp role.types[$(index)]

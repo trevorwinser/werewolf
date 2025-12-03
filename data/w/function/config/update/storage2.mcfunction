@@ -1,4 +1,6 @@
 #$say $(start) $(section) $(start)
-$data modify storage w:temp section set value $(section)
-$data modify storage w:temp name set from storage w:config $(section).list[$(start)].name
-function w:config/update/storage3 with storage w:temp
+data modify storage w:temp for_loop.name set value ""
+$data modify storage w:temp for_loop.name set from storage $(path) $(section).list[$(start)].name
+data modify storage w:temp for_loop.type set value ""
+$data modify storage w:temp for_loop.type set from storage $(path) $(section).list[$(start)].type
+function w:config/update/storage3 with storage w:temp for_loop

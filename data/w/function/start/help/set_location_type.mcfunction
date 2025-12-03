@@ -1,0 +1,1 @@
+$data modify storage w:temp location set value "role.$(type)"

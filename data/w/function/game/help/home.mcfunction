@@ -1,0 +1,13 @@
+tp @a[tag=!spectator,tag=1] @n[type=marker,tag=1]
+tp @a[tag=!spectator,tag=1] @n[type=marker,tag=1]
+tp @a[tag=!spectator,tag=2] @n[type=marker,tag=2]
+tp @a[tag=!spectator,tag=3] @n[type=marker,tag=3]
+tp @a[tag=!spectator,tag=4] @n[type=marker,tag=4]
+tp @a[tag=!spectator,tag=5] @n[type=marker,tag=5]
+tp @a[tag=!spectator,tag=6] @n[type=marker,tag=6]
+tp @a[tag=!spectator,tag=7] @n[type=marker,tag=7]
+tp @a[tag=!spectator,tag=8] @n[type=marker,tag=8]
+tp @a[tag=!spectator,tag=9] @n[type=marker,tag=9]
+tp @a[tag=!spectator,tag=10] @n[type=marker,tag=10]
+tp @a[tag=!spectator,tag=11] @n[type=marker,tag=11]
+execute as @a at @s run tp @s ~ ~ ~ facing 500 0 0

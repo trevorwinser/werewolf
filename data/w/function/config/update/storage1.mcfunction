@@ -1,5 +1,10 @@
 # Loads score from storage into scoreboard for all roles
+scoreboard players set role.townamount max 0
+scoreboard players set role.neutralamount max 0
+scoreboard players set role.cultamount max 0
+
 data modify storage w:temp for_loop.command set value "function w:config/update/storage2 with storage w:temp for_loop"
+$data modify storage w:temp for_loop.path set value "$(path)"
 data modify storage w:temp for_loop.section set value "role"
 data modify storage w:temp for_loop.start set value 0
 data modify storage w:temp for_loop.step set value 1

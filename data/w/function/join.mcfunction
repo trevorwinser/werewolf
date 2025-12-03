@@ -1,4 +1,5 @@
 tag @s add joined
+execute if score start game matches 1 run function w:game/action/die
 
 tellraw @a [{text:"Welcome "},{selector:"@s"},{text:"!"}]
 

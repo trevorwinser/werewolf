@@ -1,1 +1,2 @@
-$execute store result score $(section).$(name) storage run data get storage w:config $(section).$(name) 1
+$execute store result score $(section).$(name) storage run data get storage $(path) $(section).$(name) 1
+$execute unless data storage w:temp for_loop{type:""} unless data storage w:temp for_loop{name:"any"} unless data storage w:temp for_loop{name:"anytown"} unless data storage w:temp for_loop{name:"anyneutral"} unless data storage w:temp for_loop{name:"anycult"} run scoreboard players add $(section).$(type)amount max 1
