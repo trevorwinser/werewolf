@@ -2,7 +2,6 @@ $function w:start/help/set_random_index {type:"$(value)"}
 $data modify storage w:temp location set value "role.$(value)"
 function w:start/help/set_temp_role with storage w:temp
 function w:start/assign_roles/add_tag with storage w:temp temp_role
-function w:start/assign_roles/add_scoreboard with storage w:temp temp_role
 $data modify storage w:temp location set value "$(value)"
 function w:start/help/remove_role with storage w:temp
 $execute store result score temp storage run data get storage w:temp role.$(value)

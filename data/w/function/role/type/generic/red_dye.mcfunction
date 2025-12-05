@@ -1,0 +1,2 @@
+execute if data storage w:temp state{stage:"Judge"} run scoreboard players set @s judgement -1
+execute if data storage w:temp state{stage:"Judge"} run tellraw @s [{text:"You voted ",color:white},{text:"Guilty",color:red}]

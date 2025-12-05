@@ -1,0 +1,11 @@
+{
+  "criteria": {
+    "using_item": {
+      "trigger": "minecraft:using_item",
+      "conditions": {}
+    }
+  },
+  "rewards": {
+    "function": "w:ui/right_click"
+  }
+}

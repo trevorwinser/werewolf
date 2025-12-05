@@ -1,11 +1,16 @@
+# TODO: Write Werewolf moon logic
 time set midnight
 clear @a
-scoreboard players set remaining timer 60
-bossbar set stage max 60
+scoreboard players set remaining timer 45
+bossbar set stage max 45
 function w:game/help/home
-function w:game/help/lock {block:"barrier"}
+function w:game/help/lock {block:"black_concrete"}
 function w:game/help/unlock {block:"oak_planks"}
 execute as @a run attribute @s jump_strength base set 0.42
-data modify storage w:temp state.time set value "Night"
-
 function w:game/help/time
+
+scoreboard players set @a menu 0
+scoreboard players set @a target1 0
+scoreboard players set @a target2 0
+scoreboard players set @a role_action 0
+execute as @a run function w:role/handle {path:"night"}

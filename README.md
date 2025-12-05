@@ -4,29 +4,30 @@
 
 Mayor
 Abilities:
-Accrue votes by abstaining from votes during the day. Each vote abstained is a vote gained.
+Accrue votes by abstaining from votes during the day.
 Reveal yourself as Mayor during the day to use your accrued votes.
 Attributes:
-Your votes will appear as if you voted only once.
+Each vote abstained is a vote gained.
+All players will know you are the Mayor once you reveal.
 Goal:
-kill all evildoers and all who oppose the Town.
+Kill all evildoers and all who oppose the Town.
 ---
 Sheriff
 Abilities:
-Decide between investigating and killing a player at night.
+Decide whether to kill a player at night.
 Attributes:
-You can only attempt to kill players 3 times.
 If the player you kill is part of the Town, you will be killed as well.
 Goal:
-kill all evildoers and all who oppose the Town.
+Kill all evildoers and all who oppose the Town.
 ---
 Deputy
 Abilities:
-Investigate a player at night for susipicious activity.
+Investigate a player at night for suspicious activity.
 Attributes:
 If the Sheriff is killed, you will become the new Sheriff.
+If you and the Sheriff visit the same house, you will learn their identity.
 Goal:
-kill all evildoers and all who oppose the Town.
+Kill all evildoers and all who oppose the Town.
 ---
 Detective
 Abilities:
@@ -34,15 +35,16 @@ Investigate a player at night to get a clue about their role.
 Attributes:
 None.
 Goal:
-kill all evildoers and all who oppose the Town.
+Kill all evildoers and all who oppose the Town.
 ---
 Medic
 Abilities:
 Visit a player at night to heal them. If they are attacked they will be saved.
 Attributes:
 Only your target will know if they were attacked.
+You can choose to heal yourself once.
 Goal:
-kill all evildoers and all who oppose the Town.
+Kill all evildoers and all who oppose the Town.
 ---
 Scout
 Abilities:
@@ -50,7 +52,7 @@ Visit a player at night to witness who visits them.
 Attributes:
 If the player you visit is killed, the player who killed them will be aware that they were witnessed.
 Goal:
-kill all evildoers and all who oppose the Town.
+Kill all evildoers and all who oppose the Town.
 ---
 Veteran
 Abilities:
@@ -60,16 +62,16 @@ You cannot be harmed while alert.
 Anyone who visits you while you are alert will be killed.
 You can only be alert 3 times.
 Goal:
-kill all evildoers and all who oppose the Town.
+Kill all evildoers and all who oppose the Town.
 ---
 Deflector
 Abilities:
-Deflect the action of a player at night onto another player.
+Decide whether you will deflect at night.
 Attributes:
-You can only deflect targetable actions.
-Your target will know their action has been deflected.
+Anyone who visits you will have their action redirected back onto themselves, as if you performed it.
+You can only deflect 3 times.
 Goal:
-kill all evildoers and all who oppose the Town.
+Kill all evildoers and all who oppose the Town.
 ---
 Swapper
 Abilities:
@@ -77,7 +79,7 @@ Swap two players at night.
 Attributes:
 All actions targeting the two players will be swapped.
 Goal:
-kill all evildoers and all who oppose the Town.
+Kill all evildoers and all who oppose the Town.
 
 ## Cult
 
@@ -85,14 +87,15 @@ Cult Leader
 Abilities:
 Decide between initiating a player and killing a player each night.
 Attributes:
-If there is an Initiate, you may not initiate a new player.
+If there are three or more Cult members, you may not Initiate.
 If there is an Acolyte, they will kill in your place.
+You cannot initiate town and they will know if you try.
 Goal:
 Indoctrinate or kill all who do not follow the Cult.
 ---
 Acolyte
 Abilities:
-kill a player each night.
+Kill a player each night.
 Attributes:
 You can decide who to kill if the cult leader does not decide for you.
 If the Cult Leader is killed, you will become the new Cult Leader.
@@ -101,9 +104,9 @@ Indoctrinate or kill all who do not follow the Cult.
 ---
 Initiate
 Abilities:
-None.
+Learn the ways of the Cult.
 Attributes:
-If the Acolyte is killed or becomes the Cult Leader, you will become the new Acolyte.
+If there is no Fall Guy or Manipulator, you will become one the next night.
 Goal:
 Indoctrinate or kill all who do not follow the Cult.
 ---
@@ -113,54 +116,56 @@ Manipulate two players at night to act on each other.
 Attributes:
 You can only manipulate targetable actions.
 Your target will know their action has been manipulated.
+If there is no Acolyte, you will become one the next night.
 Goal:
 Indoctrinate or kill all who do not follow the Cult.
 ---
 Fall Guy
 Abilities:
-Attempt to take the place of one of your fellow cult members at night.
+Attempt to take the place of a fellow Cult member at night.
 Attributes:
-Any action done onto your selected fellow will be put onto you anonymously.
-Your action starts at a 50% success rate.
-Each night you succeed it drops by 25% and each night you fail it increases by 25%.
+Any action done onto your selected fellow will be put onto you.
+Success rate starts at 50%; each success −25%, each failure +25%
+If there is no Acolyte, you will become one the next night.
 Goal:
 Indoctrinate or kill all who do not follow the Cult.
 
-## Neutral
+## Neutral (Killing)
+Werewolf
+Abilities:
+On full moons turn into a werewolf.
+Attributes:
+As a Werewolf you can not be killed at night.
+As a Werewolf you can visit a player attacking them and anyone that visits them.
+Your attack goes through night immunity.
+As a Werewolf you may choose to stay home and attack anyone who visits you.
+Goal:
+Kill everyone in your way.
+---
+Vampire
+Abilities:
+Kill or convert players into vampires.
+Attributes:
+Vampires vote at night to bite a target.
+The youngest Vampire will visit the target at night.
+You must wait 1 night between conversions.
+There can only be a maximum of 4 Vampires.
+Goal:
+Convert or kill everyone who would oppose you.
+---
+Arsonist
+Abilities:
+Douse one player each night or ignite all doused.
+Attributes:
+Death from fire cannot be prevented.
+If you douse yourself, anyone who visits you will also be doused.
+Do nothing at night to undouse yourself.
+Goal:
+Live to see the world burn.
 
-Jester
-Abilities:
 
-Attributes:
-Goal:
-Be killed and haunt 
----
-
----
-Abilities:
-Attributes:
-Goal:
----
-Abilities:
-Attributes:
-Goal:
----
-Abilities:
-Attributes:
-Goal:
----
-Abilities:
-Attributes:
-Goal:
----
-Abilities:
-Attributes:
-Goal:
----
-
-
-## Evil Individual
-Sabotager
+## Neutral (Evil)
+Executioner
 Abilities:
 Trick the Town into voting out your target.
 Attributes:
@@ -168,3 +173,24 @@ Your target is always a Town member.
 If your target is killed at night you will become a Jester.
 Goal: 
 Get your target voted out at any cost.
+---
+Jester
+Abilities:
+Trick the Town into voting you out.
+Attributes:
+If you are voted out you may kill one of your guilty or abstaining voters the following night.
+Goal:
+Be voted out at any cost. 
+---
+
+
+
+---
+Abilities:
+Attributes:
+Goal:
+---
+Abilities:
+Attributes:
+Goal:
+---

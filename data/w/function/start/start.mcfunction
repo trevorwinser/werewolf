@@ -8,4 +8,4 @@ function w:start/assign_roles/load
 
 function w:start/display_roles/load
 
-function w:game/load
+schedule function w:game/load 5s

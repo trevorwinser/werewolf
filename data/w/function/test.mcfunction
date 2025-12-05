@@ -1,3 +1,2 @@
-execute as @a \
-at @s \
-run say hi
+say hi
+function w:test2

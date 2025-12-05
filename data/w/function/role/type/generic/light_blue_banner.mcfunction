@@ -1,0 +1,1 @@
+function w:role/handle with entity @s SelectedItem.components."minecraft:custom_data"

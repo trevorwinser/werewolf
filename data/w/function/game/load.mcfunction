@@ -11,39 +11,56 @@ summon marker 542 1 16 {Tags:["10"]}
 summon marker 527 1 36 {Tags:["11"]}
 
 # Give each player a unique ID
-scoreboard objectives add display dummy "Players"
-scoreboard players set @a display 1
-scoreboard players add @r[scores={display=1}] display 1
-scoreboard players add @r[scores={display=1}] display 2
-scoreboard players add @r[scores={display=1}] display 3
-scoreboard players add @r[scores={display=1}] display 4
-scoreboard players add @r[scores={display=1}] display 5
-scoreboard players add @r[scores={display=1}] display 6
-scoreboard players add @r[scores={display=1}] display 7
-scoreboard players add @r[scores={display=1}] display 8
-scoreboard players add @r[scores={display=1}] display 9
-scoreboard players add @r[scores={display=1}] display 10
+scoreboard objectives add display dummy "Player List"
+scoreboard players set @a display 0
+scoreboard players set temp display 0
+execute as @a run function w:game/help/count
+scoreboard players reset temp display
 
-tag @a[scores={display=1}] add 1
-tag @a[scores={display=2}] add 2
-tag @a[scores={display=3}] add 3
-tag @a[scores={display=4}] add 4
-tag @a[scores={display=5}] add 5
-tag @a[scores={display=6}] add 6
-tag @a[scores={display=7}] add 7
-tag @a[scores={display=8}] add 8
-tag @a[scores={display=9}] add 9
-tag @a[scores={display=10}] add 10
-tag @a[scores={display=11}] add 11
+tag @a[scores={display=1}] add player_1
+tag @a[scores={display=2}] add player_2
+tag @a[scores={display=3}] add player_3
+tag @a[scores={display=4}] add player_4
+tag @a[scores={display=5}] add player_5
+tag @a[scores={display=6}] add player_6
+tag @a[scores={display=7}] add player_7
+tag @a[scores={display=8}] add player_8
+tag @a[scores={display=9}] add player_9
+tag @a[scores={display=10}] add player_10
+tag @a[scores={display=11}] add player_11
+
+#execute as @a run function w:game/role/load
+
+scoreboard objectives add role_uses dummy
+scoreboard players set @a role_uses 0
+scoreboard players set @a[tag=veteran] role_uses 3
+scoreboard players set @a[tag=deflector] role_uses 3
+scoreboard players set @a[tag=medic] role_uses 1
+
+scoreboard objectives add role_action dummy
+scoreboard players set @a role_action 0
+
+scoreboard objectives add role_state dummy
+scoreboard players set @a role_state 0
+scoreboard players set @a[tag=fallguy] role_state 50
 
 scoreboard objectives setdisplay sidebar display
 scoreboard objectives setdisplay list display
 
-scoreboard players set day game 0
-scoreboard players set night game 0
+scoreboard objectives add menu dummy
+scoreboard players set @a menu 0
+
+scoreboard objectives add target1 dummy
+scoreboard players set @a target1 0
+scoreboard objectives add target2 dummy
+scoreboard players set @a target2 0
+
 
 scoreboard objectives add votes dummy "Votes"
 scoreboard objectives add judgement dummy "Judgement"
+
+
+scoreboard players set time game 0
 
 bossbar add stage ""
 data modify storage w:temp state set value {time:"Day",stage:"Greet the Town"}
@@ -60,13 +77,15 @@ scoreboard players set remaining timer 15
 team add spectator
 team modify spectator color gray
 
-team add cult
+team add cult {text:"The Cult",color:red}
 
 team join cult @a[tag=cultleader]
 team join cult @a[tag=acolyte]
 team join cult @a[tag=initiate]
 team join cult @a[tag=manipulator]
 team join cult @a[tag=fallguy]
+
+tag @a[team=cult] add cult
 
 tellraw @a[team=cult] "You are part of the cult! Use /teammsg to message your fellow cult members"
 
