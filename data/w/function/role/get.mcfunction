@@ -1,1 +1,0 @@
-function w:game/help/as_all_roles {command:"function w:game/role/handle/get with storage w:temp for_loop"}

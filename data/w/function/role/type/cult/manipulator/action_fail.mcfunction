@@ -1,0 +1,13 @@
+$execute if entity @a[tag=player_$(1),tag=mayor] run tellraw @s [{text:"You cannot manipulate"},{selector:"@a[tag=player_$(1)]"}]
+$execute if entity @a[tag=player_$(1),tag=jester] run tellraw @s [{text:"You cannot manipulate"},{selector:"@a[tag=player_$(1)]"}]
+$execute if entity @a[tag=player_$(1),tag=executioner] run tellraw @s [{text:"You cannot manipulate"},{selector:"@a[tag=player_$(1)]"}]
+$execute if entity @a[tag=player_$(1),tag=veteran] run tellraw @s [{text:"You cannot manipulate"},{selector:"@a[tag=player_$(1)]"}]
+$execute if entity @a[tag=player_$(1),tag=initiate] run tellraw @s [{text:"You cannot manipulate"},{selector:"@a[tag=player_$(1)]"}]
+$execute if entity @a[tag=player_$(1),tag=deflector,scores={role_uses=0}] run tellraw @s [{text:"You cannot manipulate"},{selector:"@a[tag=player_$(1)]"}]
+
+$execute if entity @a[tag=player_$(2),tag=mayor] run tellraw @s [{text:"You cannot manipulate"},{selector:"@a[tag=player_$(2)]"}]
+$execute if entity @a[tag=player_$(2),tag=jester] run tellraw @s [{text:"You cannot manipulate"},{selector:"@a[tag=player_$(2)]"}]
+$execute if entity @a[tag=player_$(2),tag=executioner] run tellraw @s [{text:"You cannot manipulate"},{selector:"@a[tag=player_$(2)]"}]
+$execute if entity @a[tag=player_$(2),tag=veteran] run tellraw @s [{text:"You cannot manipulate"},{selector:"@a[tag=player_$(2)]"}]
+$execute if entity @a[tag=player_$(2),tag=initiate] run tellraw @s [{text:"You cannot manipulate"},{selector:"@a[tag=player_$(2)]"}]
+$execute if entity @a[tag=player_$(2),tag=deflector,scores={role_uses=0}] run tellraw @s [{text:"You cannot manipulate"},{selector:"@a[tag=player_$(2)]"}]

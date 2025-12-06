@@ -74,6 +74,9 @@ function w:game/help/storage
 function w:timer
 scoreboard players set remaining timer 15
 
+
+execute as @a[tag=mayor] run team add mayor "Mayor"
+
 team add spectator
 team modify spectator color gray
 
@@ -89,6 +92,7 @@ tag @a[team=cult] add cult
 
 tellraw @a[team=cult] "You are part of the cult! Use /teammsg to message your fellow cult members"
 
+execute as @a[tag=cult] run function w:game/help/teammates
 
 function w:game/help/home
 function w:game/day/load

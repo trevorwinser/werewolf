@@ -1,0 +1,1 @@
+execute if score @s menu matches 1 run function w:role/menu/players_not_tag2 {tag:"vampire"}

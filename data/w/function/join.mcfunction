@@ -19,4 +19,4 @@ scoreboard players set @s online 1
 
 attribute @s minecraft:jump_strength base set 0.42
 
-
+execute if score start game matches 0 run function w:end/remove_roles/load

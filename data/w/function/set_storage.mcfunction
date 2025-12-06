@@ -19,3 +19,6 @@ data modify storage w:config role.list set value [{name:"any",display:"Any",type
 {name:"initiate",display:"Initiate",type:"cult",subtype:"none",abilities:"Learn the ways of the Cult.",attributes:"If there is no Fall Guy, you will become one the next night.",goal:"Indoctrinate or kill all who do not follow the Cult."}, \
 {name:"manipulator",display:"Manipulator",type:"cult",subtype:"none",abilities:"Manipulate two players at night to act on each other.",attributes:"You can only manipulate targetable actions.\nYour target will know their action has been manipulated.\nIf there is no Acolyte, you will become one the next night.",goal:""}, \
 {name:"fallguy",display:"Fall Guy",type:"cult",subtype:"none",abilities:"Attempt to take the place of one of your fellow cult members at night.",attributes:"Any action done onto your selected fellow will be put onto you.\nSuccess rate starts at 50%; each success −25%, each failure +25%\nIf there is no Acolyte, you will become one the next night.",goal:"Indoctrinate or kill all who do not follow the Cult."}]
+
+
+#{name:"pandora",display:"Pandora",type:"neutral",subtype:"chaos",abilities:"Receive the power of a random role each night.",attributes:"You never receive the same role twice.",goal:"Save one player from death and kill one player."}, \

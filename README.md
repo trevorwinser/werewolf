@@ -184,11 +184,14 @@ Be voted out at any cost.
 ---
 
 
-
----
+## Neutral (Chaos)
+Pandora
 Abilities:
+Receive the power of a random role each night.
 Attributes:
+You never receive the same role twice.
 Goal:
+Save one player from death and kill one player.
 ---
 Abilities:
 Attributes:

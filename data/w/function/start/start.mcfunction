@@ -2,6 +2,8 @@
 #gamemode spectator @a
 #tag @a add playing
 
+kill @e[type=interaction]
+
 function w:start/decide_roles/load
 
 function w:start/assign_roles/load
