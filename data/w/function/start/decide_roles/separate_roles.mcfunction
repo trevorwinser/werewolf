@@ -1,2 +1,2 @@
-say SEPARATING ROLES
+#say SEPARATING ROLES
 function w:start/help/for_each_role_outer {command:"function w:start/help/separate_roles with storage w:temp for_loop",value:"list",inner_for_loop_command:"",inner_for_loop_value:""}

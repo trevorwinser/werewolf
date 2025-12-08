@@ -1,0 +1,6 @@
+$execute as @s[tag=!deceived] run tellraw @a[subtype=killing,scores={target1=$(target)}] "You were spotted!"
+$execute as @s[tag=deceived] run tellraw @a[subtype=killing,scores={target1=$(target)},tag=!cult] "You were spotted!"
+$execute if entity @a[scores={target1=$(target)}] run tellraw @s[tag=!deceived] [{text:"You scouted "},{selector:"@a[tag=player_$(target)]"},{text:" and saw "},{selector:"@a[scores={target1=$(target)}]"}]
+$execute if entity @a[scores={target1=$(target)},tag=!cult] run tellraw @s[tag=deceived] [{text:"You scouted "},{selector:"@a[tag=player_$(target)]"},{text:" and saw "},{selector:"@a[scores={target1=$(target)},tag=!cult]"}]
+$execute unless entity @a[scores={target1=$(target)}] run tellraw @s[tag=!deceived] [{text:"You scouted "},{selector:"@a[tag=player_$(target)]"},{text:" and saw nobody!"}]
+$execute unless entity @a[scores={target1=$(target)},tag=!cult] run tellraw @s[tag=deceived] [{text:"You scouted "},{selector:"@a[tag=player_$(target)]"},{text:" and saw nobody!"}]

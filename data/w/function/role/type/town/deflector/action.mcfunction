@@ -1,0 +1,2 @@
+execute store result storage w:temp target int 1 run scoreboard players get @s display
+execute if score @s role_action matches 1 run function w:role/type/town/deflector/action_macro with storage w:temp

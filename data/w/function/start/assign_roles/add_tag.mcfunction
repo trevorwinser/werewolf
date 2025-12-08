@@ -1,5 +1,7 @@
 $scoreboard players add $(name) active_roles 1
 $tag @s add $(name)
+$tag @s add $(type)
+$tag @s add $(subtype)
 tag @s add assigned
 $tellraw @s "You are the $(display)"
 $tellraw @s "Abilties:\n$(abilities)\nAttributes:\n$(attributes)\nGoal:\n$(goal)"

@@ -1,0 +1,1 @@
+$tag @a[tag=player_$(target)] add cultkilled

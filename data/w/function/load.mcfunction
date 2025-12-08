@@ -7,6 +7,8 @@ kill @e[type=!player]
 tp @a 0 1 0
 spawnpoint @a 0 1 0
 
+gamemode adventure @a
+
 gamerule doDaylightCycle false
 gamerule doWeatherCycle false
 gamerule doImmediateRespawn true

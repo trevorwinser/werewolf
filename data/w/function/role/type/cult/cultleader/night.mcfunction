@@ -4,4 +4,4 @@ item replace entity @s container.3 with red_dye[consumable={consume_seconds:1000
 
 item replace entity @s container.4 with gray_dye[consumable={consume_seconds:10000},custom_name={text:"Right Click to Do Nothing",italic:false,color:gray}]
 
-item replace entity @s container.5 with lime_dye[consumable={consume_seconds:10000},custom_name={text:"Right Click to Initiate",italic:false,color:green}]
+item replace entity @s container.5 with lime_dye[consumable={consume_seconds:10000},custom_name={text:"Right Click to Deceive",italic:false,color:green}]

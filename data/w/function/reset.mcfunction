@@ -39,5 +39,24 @@ tag @a remove player_11
 
 team remove cult
 team remove spectator
+team remove vampire
+team remove mayor
+
 tag @a remove checked
 tag @a remove cult
+tag @a remove spectator
+tag @a remove target
+tag @a remove bit
+tag @a remove youngest
+tag @a remove won
+tag @a remove doused
+tag @a remove can_convert
+
+tag @a remove deflected
+tag @a remove shameleave
+tag @a remove cultkilled
+tag @a remove mauled
+tag @a remove veterankilled
+tag @a remove serialkilled
+tag @a remove invulnerable
+tag @a remove deceived

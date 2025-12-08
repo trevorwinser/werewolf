@@ -37,7 +37,7 @@ execute if score role.any storage matches 1.. run function w:start/decide_roles/
 
 function w:start/decide_roles/count_roles
 
-# Handle executioner by requiring that at least one town exists
-execute if score role.executioner storage < role.townamount storage run function w:start/decide_roles/handle_executioner
+# Handle executioner by requiring that at least one town exists => Nope! Just don't allow them to start without a town
+#execute if score role.executioner storage < role.townamount storage run function w:start/decide_roles/handle_executioner
 
 execute if score role.halfamount storage < role.cultamount storage run function w:start/decide_roles/handle_too_many_cult

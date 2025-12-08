@@ -1,0 +1,1 @@
+$scoreboard players remove $(name) active_roles 1

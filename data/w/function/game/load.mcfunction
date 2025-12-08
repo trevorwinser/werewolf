@@ -57,7 +57,7 @@ scoreboard players set @a target2 0
 
 
 scoreboard objectives add votes dummy "Votes"
-scoreboard objectives add judgement dummy "Judgement"
+scoreboard objectives add judgement dummy "judgement"
 
 
 scoreboard players set time game 0
@@ -75,24 +75,30 @@ function w:timer
 scoreboard players set remaining timer 15
 
 
-execute as @a[tag=mayor] run team add mayor "Mayor"
+team add mayor "Mayor"
+team modify mayor color green
+team modify mayor prefix "Mayor "
 
 team add spectator
 team modify spectator color gray
 
 team add cult {text:"The Cult",color:red}
 
-team join cult @a[tag=cultleader]
-team join cult @a[tag=acolyte]
-team join cult @a[tag=initiate]
-team join cult @a[tag=manipulator]
-team join cult @a[tag=fallguy]
+team join cult @a[tag=cult]
+execute store result score temp storage run team list cult
+execute if score temp storage matches 2.. run tellraw @a[team=cult] "You are part of the cult! Use /teammsg to message your fellow cult members"
 
-tag @a[team=cult] add cult
+team add vampire
 
-tellraw @a[team=cult] "You are part of the cult! Use /teammsg to message your fellow cult members"
+team join vampire @a[tag=vampire]
+
+execute unless entity @a[tag=!spectator,tag=vampire,tag=youngest] run tag @r[tag=!spectator,tag=vampire] add youngest
 
 execute as @a[tag=cult] run function w:game/help/teammates
+
+execute as @a[tag=executioner] run function w:game/help/target
+
+
 
 function w:game/help/home
 function w:game/day/load

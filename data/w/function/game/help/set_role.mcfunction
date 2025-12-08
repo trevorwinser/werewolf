@@ -1,0 +1,1 @@
+$data modify storage w:temp role.available[$(index)] set from storage w:temp new_role

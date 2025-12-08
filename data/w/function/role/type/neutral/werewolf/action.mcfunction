@@ -1,0 +1,2 @@
+execute if score @s role_state matches 1 store result storage w:temp target int 1 run scoreboard players get @s target1
+execute if score @s role_state matches 1 unless score @s role_action matches 0 run function w:role/type/neutral/werewolf/action_macro with storage w:temp

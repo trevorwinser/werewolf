@@ -1,2 +1,2 @@
-say REMOVING DUPLICATES FROM ALL LISTS
+#say REMOVING DUPLICATES FROM ALL LISTS
 $function w:start/help/for_each_role_outer {command:"function w:start/help/for_each_role_inner with storage w:temp for_loop",value:"available",inner_for_loop_command:"function w:start/help/remove_duplicate with storage w:temp inner_for_loop",inner_for_loop_value:"$(list)"}

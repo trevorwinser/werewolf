@@ -153,6 +153,14 @@ There can only be a maximum of 4 Vampires.
 Goal:
 Convert or kill everyone who would oppose you.
 ---
+Serial Killer
+Abilities:
+Kill one player at night.
+Attributes:
+You must kill.
+Goal:
+Kill everyone.
+---
 Arsonist
 Abilities:
 Douse one player each night or ignite all doused.

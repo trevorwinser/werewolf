@@ -1,5 +1,6 @@
 time set noon
 clear @a
+function w:game/help/lock {block:"glowstone"}
 function w:game/help/lock {block:"air"}
 function w:game/help/unlock {block:"redstone_torch"}
 bossbar set minecraft:stage color green

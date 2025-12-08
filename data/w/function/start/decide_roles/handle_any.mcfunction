@@ -1,4 +1,4 @@
-$say ADDING random type: $(type)
+#$say ADDING random type: $(type)
 data modify storage w:temp for_loop.command set value "function w:start/help/add_any with storage w:temp for_loop"
 data modify storage w:temp for_loop.start set value 0
 data modify storage w:temp for_loop.step set value 1

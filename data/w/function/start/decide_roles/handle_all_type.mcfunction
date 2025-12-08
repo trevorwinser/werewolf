@@ -1,5 +1,5 @@
 # Remove some of the roles of that type. Remove more than majority if type is cult to prevent instant win on votes
-$say HANDLING ALL TYPE: $(type)
+#$say HANDLING ALL TYPE: $(type)
 data modify storage w:temp for_loop.command set value "function w:start/help/remove_some with storage w:temp for_loop"
 data modify storage w:temp for_loop.start set value 0
 data modify storage w:temp for_loop.step set value 1
