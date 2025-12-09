@@ -26,5 +26,4 @@ difficulty peaceful
 function w:config/load
 data remove storage w:temp for_loop
 data remove storage w:temp inner_for_loop
-
-execute as @a run attribute @s minecraft:jump_strength base set 0.42
+scoreboard objectives setdisplay sidebar

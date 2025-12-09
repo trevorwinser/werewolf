@@ -1,0 +1,1 @@
+$data modify entity @s Item.components."minecraft:custom_name" set value {text:"$(text1)$(text2)",italic:false}

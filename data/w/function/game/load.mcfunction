@@ -16,6 +16,8 @@ scoreboard players set @a display 0
 scoreboard players set temp display 0
 execute as @a run function w:game/help/count
 scoreboard players reset temp display
+scoreboard objectives setdisplay below_name display
+scoreboard objectives setdisplay list display
 
 tag @a[scores={display=1}] add player_1
 tag @a[scores={display=2}] add player_2
@@ -44,8 +46,6 @@ scoreboard objectives add role_state dummy
 scoreboard players set @a role_state 0
 scoreboard players set @a[tag=fallguy] role_state 50
 
-scoreboard objectives setdisplay sidebar display
-scoreboard objectives setdisplay list display
 
 scoreboard objectives add menu dummy
 scoreboard players set @a menu 0
@@ -82,13 +82,13 @@ team modify mayor prefix "Mayor "
 team add spectator
 team modify spectator color gray
 
-team add cult {text:"The Cult",color:red}
+team add cult {text:"The Cult",color:light_purple}
 
 team join cult @a[tag=cult]
 execute store result score temp storage run team list cult
 execute if score temp storage matches 2.. run tellraw @a[team=cult] "You are part of the cult! Use /teammsg to message your fellow cult members"
 
-team add vampire
+team add vampire {color:red,text:"Brood"}
 
 team join vampire @a[tag=vampire]
 

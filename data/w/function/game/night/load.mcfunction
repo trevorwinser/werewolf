@@ -2,11 +2,12 @@ execute if score .total judgement matches ..-1 as @a[tag=trial] run function w:g
 tag @a remove trial
 scoreboard players set .total judgement 0
 
-execute as @a[tag=!spectator,tag=shameleave] if entity @a[tag=!healed,tag=sheriffkilled,tag=town] run function w:game/help/die {reason:"left the town out of shame"}
+execute as @a[tag=!spectator,tag=shameleave] if entity @a[tag=sheriffkilled,tag=town] run function w:game/help/die {reason:"left the town out of shame"}
 tag @a remove sheriffkilled
 tag @a remove shameleave
-
+tag @a[tag=bit] add can_convert
 function w:game/help/convert_process
+execute unless entity @a[tag=sheriff,tag=!spectator] run tag @a[tag=deputy,tag=!spectator] add can_convert
 
 execute if function w:game/help/win_check run schedule function w:end/load 1t
 time set midnight

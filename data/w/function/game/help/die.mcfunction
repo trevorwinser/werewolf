@@ -12,4 +12,5 @@ execute as @s[tag=jester] if data storage w:temp {reason:"was voted out of the t
 execute as @s if data storage w:temp {reason:"was voted out of the town"} if entity @a[tag=executioner,tag=!spectator] as @s if score @s display = @n[tag=executioner,tag=!spectator] role_state run tag @n[tag=executioner,tag=!spectator] add won
 execute as @s if data storage w:temp {reason:"was voted out of the town"} as @a[tag=executioner,tag=won,tag=!spectator] run tellraw @a [{selector:"@s"},{text:" voted out their target"}]
 execute as @s if data storage w:temp {reason:"was voted out of the town"} as @a[tag=executioner,tag=won,tag=!spectator] run function w:game/help/die {reason:"left the town"}
+execute as @s[tag=target] unless data storage w:temp {reason:"was voted out of the town"} run tag @a[tag=executioner,tag=!spectator] add can_convert
 scoreboard players reset @s display

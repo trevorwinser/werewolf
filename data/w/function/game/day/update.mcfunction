@@ -5,7 +5,7 @@ execute if data storage w:temp state{stage:"Last Words"}
 execute if data storage w:temp state{stage:"Last Words"} run data modify storage w:temp state.time set value "Night"
 execute if data storage w:temp state{stage:"Last Words"} run return run function w:game/state/update
 
-execute if data storage w:temp state{stage:"Judge"} run function w:game/day/judge/decide_judgement
+execute if data storage w:temp state{stage:"Judge"} run return run function w:game/day/judge/decide_judgement
 
 execute if data storage w:temp state{stage:"Tie"} run data modify storage w:temp state.time set value "Night"
 execute if data storage w:temp state{stage:"Tie"} run return run function w:game/state/update

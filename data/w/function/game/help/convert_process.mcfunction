@@ -1,4 +1,3 @@
-tag @a[tag=bit] add can_convert
 execute as @a[tag=!spectator,tag=can_convert,tag=bit] run function w:game/help/convert_to {role:"vampire"}
 execute as @a[tag=!spectator,tag=can_convert,tag=acolyte] unless score cultleader active_roles matches 0 run function w:game/help/convert_to {role:"cultleader"}
 execute as @a[tag=!spectator,tag=can_convert,tag=manipulator] unless score acolyte active_roles matches 0 run function w:game/help/convert_to {role:"acolyte"}
