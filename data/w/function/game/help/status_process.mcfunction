@@ -1,6 +1,7 @@
 tellraw @a[tag=deflected] [{color:green,text:"[Deflected]"},{color:white,text:"Your action was deflected back onto you!"}]
 execute as @a[tag=deflected] run tellraw @s [{color:green,text:"[Deflected]"},{color:white,text:"You deflected an action"}]
 execute as @a[tag=!healed,tag=cultkilled,tag=!invulnerable] run function w:game/help/die {reason:"was killed by the Cult"}
+execute as @a[tag=ignited] run function w:game/help/die {reason:"was burnt by the arsonist"}
 execute as @a[tag=mauled,tag=!invulnerable] run function w:game/help/die {reason:"was mauled by the Werewolf"}
 execute as @a[tag=!healed,tag=sheriffkilled,tag=!invulnerable] run function w:game/help/die {reason:"was killed by the Sheriff"}
 execute as @a[tag=!healed,tag=veterankilled,tag=!invulnerable] run function w:game/help/die {reason:"was killed visiting the Veteran"}
@@ -20,3 +21,4 @@ tag @a remove veterankilled
 tag @a remove serialkilled
 tag @a remove invulnerable
 tag @a remove deceived
+tag @a remove ignited
