@@ -6,6 +6,10 @@
 
 # Note:
 # When manipulator selects swapper as one of the targets, the swapper takes on both targets from the manipulator (swaps themself and the other target)
+
+
+execute as @a[tag=!spectator,tag=survivor] run function w:role/handle {path:"action"}
+
 execute as @a[tag=!spectator,tag=manipulator] run function w:role/handle {path:"action"}
 
 execute as @a[tag=!spectator,tag=swapper] run function w:role/handle {path:"action"}
@@ -30,6 +34,8 @@ execute as @a[tag=!spectator,tag=serialkiller] run function w:role/handle {path:
 # Conditional Killing
 execute unless entity @a[tag=!spectator,tag=vampire,tag=youngest] run tag @r[tag=!spectator,tag=vampire] add youngest
 execute as @a[tag=!spectator,tag=vampire,tag=youngest] run function w:role/handle {path:"action"}
+
+execute as @a[tag=!spectator,tag=vampirehunter] run function w:role/handle {path:"action"}
 
 execute as @a[tag=!spectator,tag=veteran] run function w:role/handle {path:"action"}
 

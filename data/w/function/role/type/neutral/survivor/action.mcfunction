@@ -1,0 +1,1 @@
+execute if score @s role_action matches 1 run tag @s add invulnerable

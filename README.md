@@ -80,6 +80,27 @@ Attributes:
 All actions targeting the two players will be swapped.
 Goal:
 Kill all evildoers and all who oppose the Town.
+---
+Vampire Hunter
+Abilities:
+Visit a player with garlic at night.
+Attributes:
+If you visit a vampire, you will kill them (with garlic).
+If a vampire visits you, they die.
+Convert into a Chef when no vampire remains.
+Goal:
+Kill all evildoers and all who oppose the Town.
+---
+Cook
+Abilities:
+Cook a meal for a player at night.
+Attributes:
+If they are Town, they will be protected the next night.
+Otherwise, their action will be blocked the next night.
+Goal:
+Kill all evildoers and all who oppose the Town.
+---
+
 
 ## Cult
 
@@ -133,14 +154,13 @@ Indoctrinate or kill all who do not follow the Cult.
 ## Neutral (Killing)
 Werewolf
 Abilities:
-On full moons turn into a werewolf.
-Attributes:
-As a Werewolf you can not be killed at night.
-As a Werewolf you can visit a player attacking them and anyone that visits them.
-Your attack goes through night immunity.
-As a Werewolf you may choose to stay home and attack anyone who visits you.
+On full moons, turn into a werewolf.
+Attributes: 
+As a Werewolf you are invulnerable, and can kill any vulnerable player.
+As a Werewolf you can attack a player and all who visit them.
+As a Werewolf you stay home and attack all who visit you.
 Goal:
-Kill everyone in your way.
+Maul everyone in your way.
 ---
 Vampire
 Abilities:
@@ -166,8 +186,9 @@ Abilities:
 Douse one player each night or ignite all doused.
 Attributes:
 Death from fire cannot be prevented.
-If you douse yourself, anyone who visits you will also be doused.
+If you are doused, anyone who visits you will also be doused.
 Do nothing at night to undouse yourself.
+You can see who you have doused
 Goal:
 Live to see the world burn.
 
@@ -200,6 +221,14 @@ Attributes:
 You never receive the same role twice.
 Goal:
 Save one player from death and kill one player.
+---
+Survivor
+Abilities:
+Protect yourself at night.
+Attributes:
+You can only protect yourself twice.
+Goal:
+Survive to the end of the game.
 ---
 Abilities:
 Attributes:

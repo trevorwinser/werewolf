@@ -9,6 +9,7 @@ scoreboard objectives remove target1
 scoreboard objectives remove target2
 scoreboard objectives remove role_state
 scoreboard objectives remove role_uses
+scoreboard objectives remove role_action
 scoreboard objectives remove menu
 
 bossbar remove stage

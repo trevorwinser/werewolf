@@ -1,4 +1,3 @@
-scoreboard players set @s role_action 1
 execute if data storage w:temp state{time:"Night"} run tellraw @s "Who do you want to visit?"
 execute if data storage w:temp state{time:"Night"} run function w:role/menu/players_not_self1
 

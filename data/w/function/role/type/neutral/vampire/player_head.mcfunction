@@ -1,1 +1,1 @@
-function w:role/type/generic/player_head_macro with entity @s SelectedItem.components."minecraft:custom_data"
+function w:role/type/vampire/player_head_macro with entity @s SelectedItem.components."minecraft:custom_data"

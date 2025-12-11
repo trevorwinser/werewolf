@@ -2,7 +2,15 @@
   "criteria": {
     "using_item": {
       "trigger": "minecraft:using_item",
-      "conditions": {}
+      "conditions": {
+        "item": {
+          "components": {
+            "minecraft:consumable": {
+              "consume_seconds": 10000
+            }
+          }
+        }
+      }
     }
   },
   "rewards": {

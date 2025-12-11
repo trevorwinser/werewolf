@@ -1,3 +1,4 @@
 title @a title {"text": "","extra": [{"storage":"w:temp", "nbt":"state.time"},{"text":" "},{"score":{"name":"time","objective":"game"}}]}
-
-tellraw @a {"text": "","extra": [{"storage":"w:temp", "nbt":"state.time"},{"text":" "},{"score":{"name":"time","objective":"game"}}]}
+execute if data storage w:temp state{time:"Night"} if score time game matches 1 run title @a subtitle "Right click items to use them"
+execute if data storage w:temp state{time:"Day"} run tellraw @a [{"storage":"w:temp", "nbt":"state.time"},{"text":" "},{"score":{"name":"time","objective":"game"}}]
+execute if data storage w:temp state{time:"Night"} run tellraw @a [{"storage":"w:temp", "nbt":"state.time"},{"text":" "},{"storage":"w:temp", "nbt":"state.moon"},{"text":" "},{"score":{"name":"time","objective":"game"}}]

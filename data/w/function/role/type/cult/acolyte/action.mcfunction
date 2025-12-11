@@ -1,2 +1,2 @@
 execute store result storage w:temp target int 1 run scoreboard players get @s target1
-function w:role/type/cult/acolyte/action_macro with storage w:temp
+execute unless score @s role_action matches 0 run function w:role/type/cult/acolyte/action_macro with storage w:temp

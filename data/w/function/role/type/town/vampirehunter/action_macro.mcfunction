@@ -1,0 +1,3 @@
+$tag @a[tag=player_$(target)] add staked
+$execute if entity @a[tag=player_$(target),tag=vampire] run tellraw @s [{color:"#9f924f",text:"[Garlic] "},{color:white,text:"Your garlic affected "},{color:white,selector:"@a[tag=player_$(target)]"},{color:white,text:" last night"}]
+$execute if entity @a[tag=player_$(target),tag=!vampire] run tellraw @s [{color:"#9f924f",text:"[Garlic] "},{color:white,text:"Your garlic did not affect "},{color:white,selector:"@a[tag=player_$(target)]"},{color:white,text:" last night"}]

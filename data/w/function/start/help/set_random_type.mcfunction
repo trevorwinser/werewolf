@@ -16,6 +16,9 @@ execute if score role.cultamount storage >= role.halfamount storage if data stor
 execute if score role.cultamount storage >= role.townamount storage unless score role.townamount storage matches ..0 if data storage w:temp {type1:"cult"} run data remove storage w:temp role.types[0]
 execute if score role.cultamount storage >= role.townamount storage unless score role.townamount storage matches ..0 if data storage w:temp {type2:"cult"} run data remove storage w:temp role.types[1]
 execute if score role.cultamount storage >= role.townamount storage unless score role.townamount storage matches ..0 if data storage w:temp {type3:"cult"} run data remove storage w:temp role.types[2]
+# This makes it less likely for town to not exist, but also less likely for town to be less than majority
+execute if score role.cultamount storage >= role.townamount storage unless score role.townamount storage matches ..0 if data storage w:temp {type1:"neutral"} run data remove storage w:temp role.types[0]
+execute if score role.cultamount storage >= role.townamount storage unless score role.townamount storage matches ..0 if data storage w:temp {type2:"neutral"} run data remove storage w:temp role.types[1]
 
 function w:start/help/set_random_index {type:"types"}
 function w:start/help/set_type with storage w:temp

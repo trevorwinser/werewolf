@@ -1,5 +1,7 @@
-execute unless score @s role_action matches 0 if score @s target1 matches 0 run tag @r[tag=!spectator,tag=!cult] add random1
-execute unless score @s role_action matches 0 if score @s target2 matches 0 run tag @r[tag=!spectator,tag=!cult] add random2
+execute unless score @s role_action matches 0 as @a[tag=!spectator] if score @s display = @n[tag=manipulator,tag=!spectator] target1 run tag @s add random1
+execute unless score @s role_action matches 0 as @a[tag=!spectator] if score @s display = @n[tag=manipulator,tag=!spectator] target2 run tag @s add random1
+execute unless score @s role_action matches 0 if score @s target1 matches 0 run tag @r[tag=!spectator,tag=!cult,tag=!random2] add random1
+execute unless score @s role_action matches 0 if score @s target2 matches 0 run tag @r[tag=!spectator,tag=!cult,tag=!random1] add random2
 execute unless score @s role_action matches 0 if score @s target1 matches 0 run tellraw @s [{text:"You forgot to choose target 1! You randomly picked "},{selector:"@a[tag=random1]"}]
 execute unless score @s role_action matches 0 if score @s target2 matches 0 run tellraw @s [{text:"You forgot to choose target 2! You randomly picked "},{selector:"@a[tag=random2]"}]
 execute unless score @s role_action matches 0 if score @s target1 matches 0 run scoreboard players operation @s target1 = @a[tag=random1] display

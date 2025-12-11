@@ -1,6 +1,7 @@
 #tp @a 500 50 0 0 90
 #gamemode spectator @a
 #tag @a add playing
+function w:reset
 
 kill @e[type=interaction]
 

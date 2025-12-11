@@ -1,3 +1,5 @@
+# Note:
+# This only works if only 8/11 players possess this tag
 scoreboard players set @s menu 1
 tag @s add me
 clear @s
@@ -38,11 +40,26 @@ execute at @s as @e[type=item,distance=..3,tag=!renamed] run data modify storage
 execute at @s as @e[type=item,distance=..3,tag=!renamed] run function w:role/menu/set_name with storage w:temp
 execute at @s as @e[type=item,distance=..3,tag=!renamed] run data modify entity @s Item.components."minecraft:custom_data".id set value 7
 execute at @s run tag @e[type=item,distance=..3] add renamed
-$execute unless data storage w:temp state{time:"Night"} at @s as @a[tag=player_8,tag=!spectator,tag=!me,tag=$(tag)] run loot spawn ~ ~ ~ loot w:head
-execute unless data storage w:temp state{time:"Night"} at @s as @e[type=item,distance=..3,tag=!renamed] run data modify storage w:temp text2 set from entity @s Item.components."minecraft:profile".name
-execute unless data storage w:temp state{time:"Night"} at @s as @e[type=item,distance=..3,tag=!renamed] run function w:role/menu/set_name with storage w:temp
-execute unless data storage w:temp state{time:"Night"} at @s as @e[type=item,distance=..3,tag=!renamed] run data modify entity @s Item.components."minecraft:custom_data".id set value 8
-execute unless data storage w:temp state{time:"Night"} at @s run tag @e[type=item,distance=..3] add renamed
+$execute at @s as @a[tag=player_8,tag=!spectator,tag=!me,tag=$(tag)] run loot spawn ~ ~ ~ loot w:head
+execute at @s as @e[type=item,distance=..3,tag=!renamed] run data modify storage w:temp text2 set from entity @s Item.components."minecraft:profile".name
+execute at @s as @e[type=item,distance=..3,tag=!renamed] run function w:role/menu/set_name with storage w:temp
+execute at @s as @e[type=item,distance=..3,tag=!renamed] run data modify entity @s Item.components."minecraft:custom_data".id set value 8
+execute at @s run tag @e[type=item,distance=..3] add renamed
+$execute at @s as @a[tag=player_9,tag=!spectator,tag=!me,tag=$(tag)] run loot spawn ~ ~ ~ loot w:head
+execute at @s as @e[type=item,distance=..3,tag=!renamed] run data modify storage w:temp text2 set from entity @s Item.components."minecraft:profile".name
+execute at @s as @e[type=item,distance=..3,tag=!renamed] run function w:role/menu/set_name with storage w:temp
+execute at @s as @e[type=item,distance=..3,tag=!renamed] run data modify entity @s Item.components."minecraft:custom_data".id set value 9
+execute at @s run tag @e[type=item,distance=..3] add renamed
+$execute at @s as @a[tag=player_10,tag=!spectator,tag=!me,tag=$(tag)] run loot spawn ~ ~ ~ loot w:head
+execute at @s as @e[type=item,distance=..3,tag=!renamed] run data modify storage w:temp text2 set from entity @s Item.components."minecraft:profile".name
+execute at @s as @e[type=item,distance=..3,tag=!renamed] run function w:role/menu/set_name with storage w:temp
+execute at @s as @e[type=item,distance=..3,tag=!renamed] run data modify entity @s Item.components."minecraft:custom_data".id set value 10
+execute at @s run tag @e[type=item,distance=..3] add renamed
+$execute at @s as @a[tag=player_11,tag=!spectator,tag=!me,tag=$(tag)] run loot spawn ~ ~ ~ loot w:head
+execute at @s as @e[type=item,distance=..3,tag=!renamed] run data modify storage w:temp text2 set from entity @s Item.components."minecraft:profile".name
+execute at @s as @e[type=item,distance=..3,tag=!renamed] run function w:role/menu/set_name with storage w:temp
+execute at @s as @e[type=item,distance=..3,tag=!renamed] run data modify entity @s Item.components."minecraft:custom_data".id set value 11
+execute at @s run tag @e[type=item,distance=..3] add renamed
 
-item replace entity @s container.8 with light_blue_banner[consumable={consume_seconds:10000},custom_name=[{text:"Next",italic:false}],custom_data={path:"next"},banner_patterns=[{pattern:stripe_right,color:white},{pattern:stripe_middle,color:white},{pattern:stripe_top,color:light_blue},{pattern:stripe_bottom,color:light_blue},{pattern:curly_border,color:light_blue}]]
+
 tag @s remove me

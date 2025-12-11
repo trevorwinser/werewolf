@@ -10,13 +10,15 @@ summon marker 544 3 -8 {Tags:["9"]}
 summon marker 542 1 16 {Tags:["10"]}
 summon marker 527 1 36 {Tags:["11"]}
 
+tellraw @a "Active Roles:"
+function w:help/for_loop/start {command:"function w:game/help/say_role with storage w:temp for_loop",start:0,step:1,end:10}
 # Give each player a unique ID
-scoreboard objectives add display dummy "Player List"
+scoreboard objectives add display dummy "Player"
 scoreboard players set @a display 0
 scoreboard players set temp display 0
 execute as @a run function w:game/help/count
 scoreboard players reset temp display
-scoreboard objectives setdisplay below_name display
+scoreboard objectives modify display numberformat styled {color:aqua,bold:true}
 scoreboard objectives setdisplay list display
 
 tag @a[scores={display=1}] add player_1
@@ -38,6 +40,7 @@ scoreboard players set @a role_uses 0
 scoreboard players set @a[tag=veteran] role_uses 3
 scoreboard players set @a[tag=deflector] role_uses 3
 scoreboard players set @a[tag=medic] role_uses 1
+scoreboard players set @a[tag=survivor] role_uses 2
 
 scoreboard objectives add role_action dummy
 scoreboard players set @a role_action 0
@@ -66,7 +69,7 @@ bossbar add stage ""
 data modify storage w:temp state set value {time:"Day",stage:"Greet the Town"}
 bossbar set minecraft:stage visible true
 bossbar set minecraft:stage players @a
-bossbar set minecraft:stage color green
+bossbar set minecraft:stage color yellow
 bossbar set stage max 15
 
 function w:game/help/storage
@@ -94,11 +97,11 @@ team join vampire @a[tag=vampire]
 
 execute unless entity @a[tag=!spectator,tag=vampire,tag=youngest] run tag @r[tag=!spectator,tag=vampire] add youngest
 
-execute as @a[tag=cult] run function w:game/help/teammates
+execute as @a[tag=cult] run function w:game/help/teammates {team:"cult"}
 
 execute as @a[tag=executioner] run function w:game/help/target
 
-
+effect clear @a
 
 function w:game/help/home
 function w:game/day/load
