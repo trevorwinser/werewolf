@@ -45,6 +45,6 @@ execute as @a run attribute @s jump_strength base set 0.42
 
 scoreboard players set @a menu 0
 scoreboard players set @a target1 0
-scoreboard players set @a target2 0
+scoreboard players set @a[tag=!chef] target2 0
 scoreboard players set @a role_action 0
 execute as @a[tag=!spectator] run function w:role/handle {path:"night"}

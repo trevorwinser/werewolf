@@ -15,7 +15,7 @@ function w:help/for_loop/start {command:"function w:game/help/say_role with stor
 # Give each player a unique ID
 scoreboard objectives add display dummy "Player"
 scoreboard players set @a display 0
-scoreboard players set temp display 0
+scoreboard players operation temp display = total online
 execute as @a run function w:game/help/count
 scoreboard players reset temp display
 scoreboard objectives modify display numberformat styled {color:aqua,bold:true}

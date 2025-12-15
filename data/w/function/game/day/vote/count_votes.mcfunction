@@ -1,4 +1,4 @@
-scoreboard players set @a votes 0
+scoreboard players set @a[tag=!spectator] votes 0
 execute as @a[tag=!spectator,scores={target1=1}] run scoreboard players add @a[tag=player_1] votes 1
 execute as @a[tag=!spectator,scores={target1=2}] run scoreboard players add @a[tag=player_2] votes 1
 execute as @a[tag=!spectator,scores={target1=3}] run scoreboard players add @a[tag=player_3] votes 1

@@ -61,3 +61,8 @@ tag @a remove veterankilled
 tag @a remove serialkilled
 tag @a remove invulnerable
 tag @a remove deceived
+
+tag @a remove fed
+tag @a remove well_fed
+tag @a remove sick
+tag @a remove healed

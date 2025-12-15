@@ -20,3 +20,4 @@ tag @a remove invulnerable
 tag @a remove deceived
 tag @a remove ignited
 tag @a remove staked
+tag @a remove blocked

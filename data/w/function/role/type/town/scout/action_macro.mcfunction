@@ -1,6 +1,6 @@
-$execute as @s[tag=!deceived] run tellraw @a[tag=killing,scores={target1=$(target)}] "You were spotted!"
-$execute as @s[tag=deceived] run tellraw @a[tag=killing,scores={target1=$(target)},tag=!cult] "You were spotted!"
-$execute if entity @a[tag=!scout,scores={target1=$(target)}] run tellraw @s[tag=!deceived] [{text:"You scouted "},{selector:"@a[tag=player_$(target)]"},{text:" and saw "},{selector:"@a[tag=!scout,scores={target1=$(target)}]"}]
-$execute if entity @a[tag=!scout,scores={target1=$(target)},tag=!cult] run tellraw @s[tag=deceived] [{text:"You scouted "},{selector:"@a[tag=player_$(target)]"},{text:" and saw "},{selector:"@a[tag=!scout,scores={target1=$(target)},tag=!cult]"}]
-$execute unless entity @a[tag=!scout,scores={target1=$(target)}] run tellraw @s[tag=!deceived] [{text:"You scouted "},{selector:"@a[tag=player_$(target)]"},{text:" and saw nobody!"}]
-$execute unless entity @a[tag=!scout,scores={target1=$(target)},tag=!cult] run tellraw @s[tag=deceived] [{text:"You scouted "},{selector:"@a[tag=player_$(target)]"},{text:" and saw nobody!"}]
+$execute as @s[tag=!deceived] run tellraw @a[tag=killing,scores={target1=$(target)}] [{color:green,text:"[Scout] "},{color:white,text:"You were spotted!"}]
+$execute as @s[tag=deceived] run tellraw @a[tag=killing,scores={target1=$(target)},tag=!cult] [{color:green,text:"[Scout] "},{color:white,text:"You were spotted!"}]
+$execute if entity @a[tag=!scout,scores={target1=$(target)}] run tellraw @s[tag=!deceived] [{color:green,text:"[Scout] "},{color:white,text:"You scouted "},{color:white,selector:"@a[tag=player_$(target)]"},{color:white,text:" and saw "},{color:white,selector:"@a[tag=!scout,scores={target1=$(target)}]"}]
+$execute if entity @a[tag=!scout,scores={target1=$(target)},tag=!cult] run tellraw @s[tag=deceived] [{color:green,text:"[Scout] "},{color:white,text:"You scouted "},{color:white,selector:"@a[tag=player_$(target)]"},{color:white,text:" and saw "},{color:white,selector:"@a[tag=!scout,scores={target1=$(target)},tag=!cult]"}]
+$execute unless entity @a[tag=!scout,scores={target1=$(target)}] run tellraw @s[tag=!deceived] [{color:green,text:"[Scout] "},{color:white,text:"You scouted "},{color:white,selector:"@a[tag=player_$(target)]"},{color:white,text:" and saw nobody!"}]
+$execute unless entity @a[tag=!scout,scores={target1=$(target)},tag=!cult] run tellraw @s[tag=deceived] [{color:green,text:"[Scout] "},{color:white,text:"You scouted "},{color:white,selector:"@a[tag=player_$(target)]"},{color:white,text:" and saw nobody!"}]

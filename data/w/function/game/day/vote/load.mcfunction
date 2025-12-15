@@ -4,3 +4,5 @@ execute as @a[tag=!spectator] run function w:role/menu/players_not_self1
 scoreboard players set @a target1 0
 scoreboard players set @a votes 0
 scoreboard players reset @a[tag=spectator] votes
+scoreboard players reset .highest
+scoreboard players reset .total_highest
