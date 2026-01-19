@@ -6,3 +6,5 @@ function w:config/display/text {Pos:"29 3 4.0",rotation:90,alignment:"center",te
 function w:config/display/text {Pos:"29 0 4.2",rotation:90,alignment:"left",text:"1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11",color:"white",scale:1.0}
 function w:config/update/storage1 {path:"w:config"}
 function w:config/update/roles1
+
+function w:config/display/text {Pos:"29 0.5 0",rotation:90,alignment:"center",text:"Left Click Roles for More Information",color:white,scale:1}

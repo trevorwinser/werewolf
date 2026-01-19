@@ -9,11 +9,11 @@ spawnpoint @a 0 1 0
 
 gamemode adventure @a
 
-gamerule doDaylightCycle false
-gamerule doWeatherCycle false
-gamerule doImmediateRespawn true
-gamerule doMobSpawning false
-gamerule showDeathMessages false
+gamerule advance_time false
+gamerule advance_weather false
+gamerule immediate_respawn true
+gamerule spawn_mobs false
+gamerule show_death_messages false
 
 time set midnight
 

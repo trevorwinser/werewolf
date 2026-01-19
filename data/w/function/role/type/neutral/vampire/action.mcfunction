@@ -9,6 +9,6 @@ execute if entity @a[tag=bit,tag=!invulnerable,tag=!vampirehunter] run tellraw @
 execute if entity @a[tag=bit,tag=vampirehunter] run tellraw @a[tag=vampire,tag=!spectator] [{color:red,text:"[Bite] "},{color:white,selector:"@s"},{color:white,text:" couldn't bite "},{color:white,selector:"@a[tag=bit]"}]
 execute if entity @a[tag=bit,tag=invulnerable] run tellraw @a[tag=vampire,tag=!spectator] [{color:red,text:"[Bite] "},{color:white,selector:"@s"},{color:white,text:" couldn't bite "},{color:white,selector:"@a[tag=bit]"}]
 
-execute if entity @a[tag=bit,tag=vampirehunter] run tag @s add staked
+execute if entity @a[tag=bit,tag=vampirehunter] run tag @s[tag=youngest] add staked
 tellraw @a[tag=bit,tag=vampirehunter] [{color:"#9f924f",text:"[Garlic] "},{color:white,text:"A vampire visited you last night"}]
 tag @a[tag=vampirehunter] remove bit

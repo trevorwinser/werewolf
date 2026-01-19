@@ -1,1 +1,2 @@
 execute positioned -2 72 4 as @r[distance=..0.8] run advancement grant @s through w:secret/nice_view
+execute positioned -67 0 27 as @a[distance=..1.5] facing -65 0 27 run advancement grant @s through w:secret/end_of_the_maze
