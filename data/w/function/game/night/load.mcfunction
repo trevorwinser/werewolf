@@ -6,12 +6,10 @@ scoreboard objectives setdisplay sidebar
 execute as @a[tag=!spectator,tag=shameleave] if entity @a[tag=sheriffkilled,tag=town] run function w:game/help/die {reason:"left the town out of shame"}
 tag @a remove sheriffkilled
 tag @a remove shameleave
+execute unless entity @a[tag=sheriff,tag=!spectator] run tag @a[tag=deputy,tag=!spectator] add can_convert
 tag @a[tag=!spectator,tag=bit] add can_convert
 function w:game/help/convert_process
 execute as @a[tag=vampirehunter,tag=!spectator] unless entity @a[tag=vampire,tag=!spectator] run function w:game/help/convert_to {role:"chef"}
-execute unless entity @a[tag=sheriff,tag=!spectator] run tag @a[tag=deputy,tag=!spectator] add can_convert
-
-execute if function w:game/help/win_check run schedule function w:end/load 1t
 
 function w:ui/remove_right_click
 

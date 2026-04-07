@@ -4,4 +4,3 @@ function w:game/day/load
 function w:game/help/action_process
 function w:game/help/status_process
 execute as @a[tag=executioner] if entity @a[tag=town,tag=spectator,tag=target] run function w:game/help/convert_to {role:"jester"}
-execute if function w:game/help/win_check run schedule function w:end/load 1t

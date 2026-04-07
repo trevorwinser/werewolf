@@ -1,0 +1,1 @@
+$execute as @s[tag=!spectator] run tellraw @a [{text:"Their role was the $(display)"}]

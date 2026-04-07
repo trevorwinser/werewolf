@@ -48,7 +48,7 @@ execute as @a[tag=!spectator] if score @s votes > .highest votes run scoreboard 
 execute as @a[tag=!spectator] if score @s votes > .highest votes run scoreboard players operation .highest votes = @s votes
 execute as @a[tag=!spectator] if score @s votes > .highest votes run scoreboard players operation .highest votes = @s votes
 execute as @a[tag=!spectator] if score @s votes > .highest votes run scoreboard players operation .highest votes = @s votes
-
+tellraw @a ""
 execute as @a[tag=!spectator] if score @s votes = .highest votes unless score @s votes matches 0 run scoreboard players add .total_highest votes 1
 execute if score .total_highest votes matches 1 run data modify storage w:temp state.stage set value "Judge"
 execute if data storage w:temp state{stage:"Judge"} run function w:game/day/judge/load

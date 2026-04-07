@@ -5,7 +5,6 @@
 Mayor
 
 Abilities:
-
 Accrue votes by abstaining from votes during the day.
 Reveal yourself as Mayor during the day to use your accrued votes.
 

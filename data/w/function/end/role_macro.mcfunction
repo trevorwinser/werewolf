@@ -1,0 +1,1 @@
+$tellraw @a[tag=me] [{selector:"@s"},{text:"'s role was the $(display)"}]

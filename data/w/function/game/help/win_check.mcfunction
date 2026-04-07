@@ -22,6 +22,6 @@ execute as @a[tag=arsonist,tag=!spectator] unless entity @a[tag=!arsonist,tag=!s
 execute as @a[tag=arsonist,tag=!spectator] unless entity @a[tag=!arsonist,tag=!spectator] run tag @s[tag=arsonist] add won
 execute as @a[tag=arsonist,tag=!spectator] unless entity @a[tag=!arsonist,tag=!spectator] run return 1
 
-execute if score alive online matches ..1 run return 1
+execute unless entity @a[tag=!spectator] run return 1
 
 return 0

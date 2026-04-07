@@ -16,6 +16,7 @@ execute if data storage w:temp {convert_to:"chef"} run data modify storage w:tem
 function w:game/help/replace_role
 function w:game/help/set_role with storage w:temp
 
+tellraw @s ""
 execute if data storage w:temp {convert_to:"vampire"} run tag @a remove youngest
 execute if data storage w:temp {convert_to:"vampire"} run tag @s add youngest
 execute if data storage w:temp {convert_to:"vampire"} run tellraw @a[tag=vampire] [{selector:"@s"},{text:" has been converted into a Vampire"}]

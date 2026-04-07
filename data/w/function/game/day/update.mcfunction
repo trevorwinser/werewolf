@@ -1,7 +1,6 @@
 execute if data storage w:temp state{stage:"Greet the Town"} run data modify storage w:temp state.time set value "Night"
 execute if data storage w:temp state{stage:"Greet the Town"} run return run function w:game/state/update
 
-execute if data storage w:temp state{stage:"Last Words"} 
 execute if data storage w:temp state{stage:"Last Words"} run data modify storage w:temp state.time set value "Night"
 execute if data storage w:temp state{stage:"Last Words"} run return run function w:game/state/update
 

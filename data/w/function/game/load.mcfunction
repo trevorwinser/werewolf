@@ -10,8 +10,9 @@ summon marker 544 3 -8 {Tags:["9"]}
 summon marker 542 1 16 {Tags:["10"]}
 summon marker 527 1 36 {Tags:["11"]}
 
+tellraw @a ""
 tellraw @a "Active Roles:"
-function w:help/for_loop/start {command:"function w:game/help/say_role with storage w:temp for_loop",start:0,step:1,end:10}
+function w:help/for_loop/start {command:"function w:game/help/list_role with storage w:temp for_loop",start:0,step:1,end:10}
 # Give each player a unique ID
 scoreboard objectives add display dummy "Player"
 scoreboard players set @a display 0
@@ -62,6 +63,7 @@ scoreboard players set @a target2 0
 scoreboard objectives add votes dummy "Votes"
 scoreboard objectives add judgement dummy "judgement"
 
+scoreboard objectives add roles trigger
 
 scoreboard players set time game 0
 
@@ -107,6 +109,7 @@ function w:game/help/home
 function w:game/day/load
 
 title @a subtitle "Greet the Town"
+tellraw @a ""
 tellraw @a "Night 1 will begin in 15 seconds"
 
 scoreboard players set start game 1

@@ -11,6 +11,7 @@ scoreboard objectives remove role_state
 scoreboard objectives remove role_uses
 scoreboard objectives remove role_action
 scoreboard objectives remove menu
+scoreboard objectives remove roles
 
 bossbar remove stage
 

@@ -9,6 +9,7 @@ spawnpoint @a 0 1 0
 
 gamemode adventure @a
 
+gamerule players_sleeping_percentage 200
 gamerule advance_time false
 gamerule advance_weather false
 gamerule immediate_respawn true
