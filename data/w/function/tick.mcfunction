@@ -1,5 +1,5 @@
 execute store result score tick timer run time query gametime
-execute store result score daytime timer run time query daytime
+execute store result score daytime timer run time query day
 scoreboard players operation tick timer %= 20 timer
 scoreboard players operation rotation timer = daytime timer
 
@@ -18,8 +18,8 @@ execute if score start game matches 1 if score total online matches 1 run tag @a
 
 execute if score start game matches 0 at @e[type=item] run tp @p 0 1 0
 execute if score start game matches 0 run kill @e[type=item]
-execute if score start game matches 0 positioned 0 0 0 run clear @a[distance=..30] paper
-#execute if score start game matches 0 positioned 0 0 0 run item replace entity @a[distance=30..] weapon.mainhand with paper[custom_name={"bold":true,"italic":false,"text":"Drop to Go to Spawn"}] 1
+execute if score start game matches 0 positioned 0 0 0 run clear @a[distance=..35] paper
+execute if score start game matches 0 positioned 0 0 0 run item replace entity @a[distance=35..] weapon.mainhand with paper[custom_name={"bold":true,"italic":false,"text":"Drop to Go to Spawn"}] 1
 execute if score start game matches 0 as @a if predicate w:night_vision run effect give @s night_vision 11 0 true
 execute if score start game matches 0 as @a unless predicate w:night_vision run effect clear @s
 execute if score start game matches 0 run function w:config/tick

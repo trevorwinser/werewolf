@@ -66,7 +66,7 @@ scoreboard objectives add judgement dummy "judgement"
 scoreboard players set time game 0
 
 bossbar add stage ""
-data modify storage w:temp state set value {time:"Day",stage:"Greet the Town"}
+data modify storage w:temp state set value {time:"Day",stage:"Greet the Town",moon:""}
 bossbar set minecraft:stage visible true
 bossbar set minecraft:stage players @a
 bossbar set minecraft:stage color yellow
