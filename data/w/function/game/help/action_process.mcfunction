@@ -25,11 +25,13 @@ execute as @a[tag=!blocked,tag=!spectator,tag=deflector] run function w:role/han
 # When the fall guy takes the place of one of their cult members, they will essentially be twice as visitable.
 execute as @a[tag=!blocked,tag=!spectator,tag=fallguy] run function w:role/handle {path:"action"}
 
-execute as @a[tag=!blocked,tag=!spectator,tag=werewolf] run function w:role/handle {path:"action"}
-
 execute as @a[tag=!blocked,tag=!spectator,tag=arsonist] run function w:role/handle {path:"action"}
 
 execute as @a[tag=!blocked,tag=!spectator,tag=cultleader] run function w:role/handle {path:"action"}
+
+execute as @a[tag=!blocked,tag=!spectator,tag=werewolf] run function w:role/handle {path:"action"}
+
+
 
 # Generic Killing
 execute as @a[tag=!blocked,tag=!spectator,tag=acolyte] run function w:role/handle {path:"action"}

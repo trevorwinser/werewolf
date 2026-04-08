@@ -1,3 +1,4 @@
+tellraw @s [{color:"green",text:"[Fall] "},{color:white,text:"You succeeded in taking the fall -25%"}]
 $tag @a[scores={target1=$(target)},tag=!manipulator,tag=!swapper,tag=!fallguy] add redirected
 $tag @a[scores={target2=$(target)},tag=!manipulator,tag=!swapper,tag=!fallguy] add redirected
 scoreboard players operation @a[tag=redirected] target1 = @s display

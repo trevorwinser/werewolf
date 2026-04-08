@@ -230,12 +230,12 @@ Indoctrinate or kill all who do not follow the Cult.
 Werewolf
 
 Abilities:
-On full moons, turn into a werewolf.
+On full moons, fully transform into a werewolf.
 
 Attributes: 
-As a Werewolf you are invulnerable, and can kill any vulnerable player.
-As a Werewolf you can attack a player and all who visit them.
-As a Werewolf you stay home and attack all who visit you.
+You are invulnerable.
+Maul a player each night.
+On full moons, players who visit your target will also be mauled.
 
 Goal:
 Maul everyone in your way.
@@ -308,7 +308,7 @@ Abilities:
 Trick the Town into voting you out.
 
 Attributes:
-If you are voted out you may kill one of your guilty or abstaining voters the following night.
+None.
 
 Goal:
 Be voted out at any cost. 
@@ -324,7 +324,7 @@ Abilities:
 Receive the power of a random role each night.
 
 Attributes:
-You never receive the same role twice.
+Your powers are based on the active roles.
 
 Goal:
 Save one player from death and kill one player.
@@ -337,7 +337,7 @@ Abilities:
 Protect yourself at night.
 
 Attributes:
-You can only protect yourself twice.
+You can only protect yourself three times.
 
 Goal:
 Survive to the end of the game.

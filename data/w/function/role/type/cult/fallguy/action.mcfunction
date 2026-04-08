@@ -10,5 +10,5 @@ execute if entity @a[tag=cult,tag=!fallguy,tag=!spectator] if score @s role_stat
 execute if data storage w:temp {success:true} run scoreboard players remove @s role_state 25
 execute if data storage w:temp {success:false} if score @s role_state matches ..75 run scoreboard players add @s role_state 25
 
-execute if entity @a[tag=random] if data storage w:temp {success:false} run tellraw @s [{color:"red",text:"[Fall] "},{text:"You failed in taking the fall"}]
+execute if entity @a[tag=random] if data storage w:temp {success:false} run tellraw @s [{color:"red",text:"[Fall] "},{color:white,text:"You failed in taking the fall +25%"}]
 tag @a remove random

@@ -12,3 +12,5 @@ function w:start/assign_roles/load
 function w:start/display_roles/load
 
 schedule function w:game/load 5s
+
+execute as @a at @s run playsound minecraft:block.amethyst_block.chime neutral @s ~ ~ ~ 1 .1

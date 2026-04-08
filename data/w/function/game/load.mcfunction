@@ -41,7 +41,7 @@ scoreboard players set @a role_uses 0
 scoreboard players set @a[tag=veteran] role_uses 3
 scoreboard players set @a[tag=deflector] role_uses 3
 scoreboard players set @a[tag=medic] role_uses 1
-scoreboard players set @a[tag=survivor] role_uses 2
+scoreboard players set @a[tag=survivor] role_uses 3
 
 scoreboard objectives add role_action dummy
 scoreboard players set @a role_action 0
@@ -113,3 +113,5 @@ tellraw @a ""
 tellraw @a "Night 1 will begin in 15 seconds"
 
 scoreboard players set start game 1
+
+tag @a[tag=werewolf] add invulnerable
