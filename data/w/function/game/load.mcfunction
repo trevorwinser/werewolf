@@ -11,8 +11,10 @@ summon marker 542 1 16 {Tags:["10"]}
 summon marker 527 1 36 {Tags:["11"]}
 
 tellraw @a ""
-tellraw @a "Active Roles:"
+tellraw @a "Active Roles: use /trigger roles to view again"
+tag @a add displayed
 function w:help/for_loop/start {command:"function w:game/help/list_role with storage w:temp for_loop",start:0,step:1,end:10}
+tag @a remove displayed
 # Give each player a unique ID
 scoreboard objectives add display dummy "Player"
 scoreboard players set @a display 0
@@ -114,4 +116,4 @@ tellraw @a "Night 1 will begin in 15 seconds"
 
 scoreboard players set start game 1
 
-tag @a[tag=werewolf] add invulnerable
+gamerule advance_time true

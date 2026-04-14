@@ -16,5 +16,7 @@ scoreboard players operation alive online += @a[tag=!spectator] online
 execute if score tick timer matches 0 run scoreboard players remove remaining timer 1
 
 execute as @a[tag=spectator] if score @s roles matches 1 run function w:game/help/display_roles
+execute as @a[tag=!spectator] if score @s roles matches 1 run function w:game/help/list_roles
 
-scoreboard players enable @a[tag=spectator] roles
+scoreboard players enable @a roles
+scoreboard players set @a roles 0

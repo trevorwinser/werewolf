@@ -1,4 +1,3 @@
-$say $(target)
 $tag @a[scores={target1=$(target)},tag=!werewolf,tag=!manipulator,tag=!swapper] add veterankilled
 $tag @a[scores={target1=$(target)},tag=vampire,tag=!youngest] remove veterankilled
 tag @s remove cultkilled

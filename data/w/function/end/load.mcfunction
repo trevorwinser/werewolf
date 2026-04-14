@@ -6,7 +6,7 @@ execute if entity @a[tag=won] run tellraw @a [{text:"The winner(s) are: "},{sele
 tag @a add me
 execute as @a run function w:end/role
 tag @a remove me
-
+title @a subtitle [{selector:"@a[tag=won]"}, {text:" won!"}]
 execute unless entity @a[tag=won] run title @a title {text:"Nobody won!"}
 execute unless entity @a[tag=won] run tellraw @a [{text:"Nobody won!"}]
 

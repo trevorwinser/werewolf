@@ -1,1 +1,1 @@
-$tellraw @a $(display)
+$tellraw @a[tag=displayed] {text:"$(display)"}

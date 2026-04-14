@@ -1,4 +1,5 @@
-time set noon
+time set 0
+time rate 6
 clear @a
 function w:game/help/lock {block:"glowstone"}
 function w:game/help/lock {block:"air"}

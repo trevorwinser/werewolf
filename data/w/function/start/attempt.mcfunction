@@ -23,6 +23,9 @@ execute if score role.townamount storage = role.amount storage run return run fu
 execute if score role.executioner storage > role.townamount storage run title @a subtitle "The Executioner requires a town role!"
 execute if score role.executioner storage > role.townamount storage run return run function w:start/fail1
 
+execute if score role.neutralamount storage = role.neutralamount max if score role.townamount storage matches 0 run title @a subtitle "The Executioner requires a town role!"
+execute if score role.neutralamount storage = role.neutralamount max if score role.townamount storage matches 0 run return run function w:start/fail1
+
 execute if score role.executioner storage matches 1 if score role.townamount storage matches 1 if score role.mayor storage matches 1 run title @a subtitle "The Executioner cannot execute the Mayor!"
 execute if score role.executioner storage matches 1 if score role.townamount storage matches 1 if score role.mayor storage matches 1 run return run function w:start/fail1
 

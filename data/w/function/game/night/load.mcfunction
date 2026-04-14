@@ -12,19 +12,18 @@ function w:game/help/convert_process
 execute as @a[tag=vampirehunter,tag=!spectator] unless entity @a[tag=vampire,tag=!spectator] run function w:game/help/convert_to {role:"chef"}
 
 function w:ui/remove_right_click
-
+time rate 8
 scoreboard players set 4 game 4
 scoreboard players operation temp game = time game
 scoreboard players operation temp game %= 4 game
-
 execute if score temp game matches 0 run data modify storage w:temp state.moon set value "🌖"
-execute if score temp game matches 0 run time set 66000
+execute if score temp game matches 0 run time set 62000
 execute if score temp game matches 1 run data modify storage w:temp state.moon set value "🌕"
-execute if score temp game matches 1 run time set 114000
+execute if score temp game matches 1 run time set 110000
 execute if score temp game matches 2 run data modify storage w:temp state.moon set value "🌔"
-execute if score temp game matches 2 run time set 164000
+execute if score temp game matches 2 run time set 160000
 execute if score temp game matches 3 run data modify storage w:temp state.moon set value "🌑"
-execute if score temp game matches 3 run time set midnight
+execute if score temp game matches 3 run time set 14000
 function w:game/help/time
 execute if score temp game matches 3 if entity @a[tag=werewolf,tag=!spectator] run tellraw @a "A full moon is out, beware of the Werewolf"
 execute if score temp game matches 3 if entity @a[tag=werewolf,tag=!spectator] run function w:sound/play_all {sound:"minecraft:entity.wolf.ambient",volume:1,pitch:0.1}

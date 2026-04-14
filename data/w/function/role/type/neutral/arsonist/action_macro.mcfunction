@@ -1,4 +1,4 @@
-$tag @a[tag=player_$(target),tag=!invulnerable] add doused
+$execute if score @s role_action matches 1 run tag @a[tag=player_$(target),tag=!invulnerable] add doused
 execute if score @s role_action matches 0 run tag @s remove doused
 execute if entity @s[tag=doused] as @a[tag=!manipulator,tag=!swapper] if score @s target1 = @p[tag=arsonist] display run tag @s add doused
 $execute if entity @s[tag=player_$(target),tag=doused] run tellraw @s [{color:gold,text:"[Douse] "},{color:white,text:"You doused yourself"}]
