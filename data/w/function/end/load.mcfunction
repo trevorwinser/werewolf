@@ -10,6 +10,7 @@ title @a subtitle [{selector:"@a[tag=won]"}, {text:" won!"}]
 execute unless entity @a[tag=won] run title @a title {text:"Nobody won!"}
 execute unless entity @a[tag=won] run tellraw @a [{text:"Nobody won!"}]
 
+scoreboard players add @a[tag=won] wins 1
 
 schedule function w:load 1t
 return fail

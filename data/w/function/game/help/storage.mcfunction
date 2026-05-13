@@ -31,3 +31,15 @@ summon interaction 547 2 15 {Tags:["storage"],width:1.1,height:1.1}
 summon interaction 529 1 33 {Tags:["storage"],width:1.1,height:1.1}
 summon interaction 525 1 38 {Tags:["storage"],width:1.1,height:1.1}
 summon interaction 529 2 41 {Tags:["storage"],width:1.1,height:1.1}
+
+summon interaction 497 2 49 {Tags:["bed"],width:3.2,height:1.1}
+summon interaction 472 4 40 {Tags:["bed"],width:3.2,height:1.1}
+summon interaction 456 6 17 {Tags:["bed"],width:3.2,height:1.1}
+summon interaction 451 9 -3 {Tags:["bed"],width:3.2,height:1.1}
+summon interaction 463 8 -35 {Tags:["bed"],width:3.2,height:1.1}
+summon interaction 490 8 -47 {Tags:["bed"],width:3.2,height:1.1}
+summon interaction 512 6 -48 {Tags:["bed"],width:3.2,height:1.1}
+summon interaction 538 4 -34 {Tags:["bed"],width:3.2,height:1.1}
+summon interaction 548 4 -5 {Tags:["bed"],width:3.2,height:1.1}
+summon interaction 545 2 14 {Tags:["bed"],width:3.2,height:1.1}
+summon interaction 530 2 41 {Tags:["bed"],width:3.2,height:1.1}

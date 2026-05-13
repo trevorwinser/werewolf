@@ -27,4 +27,4 @@ difficulty peaceful
 function w:config/load
 data remove storage w:temp for_loop
 data remove storage w:temp inner_for_loop
-scoreboard objectives setdisplay sidebar
+scoreboard objectives setdisplay sidebar wins

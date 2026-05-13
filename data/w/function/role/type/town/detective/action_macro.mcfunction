@@ -19,12 +19,14 @@ execute if data storage w:temp clue{type:"culty"} run data modify storage w:temp
 execute if data storage w:temp clue{type:"towny"} run data modify storage w:temp clue.type set value "town"
 execute if data storage w:temp clue{subtype:"evily"} run data modify storage w:temp clue.subtype set value "evil"
 
-execute if data storage w:temp clue{type:"town",subtype:"support"} run tellraw @s [{text:"[Investigation]: ",color:green},{color:white,selector:"@a[tag=investigate]"},{color:green,text:" is helpful"}]
+execute if data storage w:temp clue{type:"town",subtype:"investigative"} run tellraw @s [{text:"[Investigation]: ",color:green},{color:white,selector:"@a[tag=investigate]"},{color:green,text:" supports a just cause"}]
+execute if data storage w:temp clue{type:"town",subtype:"support"} run tellraw @s [{text:"[Investigation]: ",color:green},{color:white,selector:"@a[tag=investigate]"},{color:green,text:" supports a just cause"}]
 execute if data storage w:temp clue{type:"town",subtype:"power"} run tellraw @s [{text:"[Investigation]: ",color:green},{color:white,selector:"@a[tag=investigate]"},{color:green,text:" leads a just cause"}]
+execute if data storage w:temp clue{type:"town",subtype:"killing"} run tellraw @s [{text:"[Investigation]: ",color:green},{color:white,selector:"@a[tag=investigate]"},{color:green,text:" kills for a just cause"}]
+
 execute if data storage w:temp clue{type:"cult",subtype:"power"} run tellraw @s [{text:"[Investigation]: ",color:green},{color:white,selector:"@a[tag=investigate]"},{color:red,text:" leads an unjust cause"}]
 execute if data storage w:temp clue{type:"cult",subtype:"support"} run tellraw @s [{text:"[Investigation]: ",color:green},{color:white,selector:"@a[tag=investigate]"},{color:red,text:" supports an unjust cause"}]
-execute if data storage w:temp clue{subtype:"killing"} run tellraw @s [{text:"[Investigation]: ",color:green},{color:white,selector:"@a[tag=investigate]"},{color:gold,text:" can kill"}]
-execute if data storage w:temp clue{subtype:"investigative"} run tellraw @s [{text:"[Investigation]: ",color:green},{color:white,selector:"@a[tag=investigate]"},{color:green,text:" supports a just cause"}]
+execute if data storage w:temp clue{type:"cult",subtype:"killing"} run tellraw @s [{text:"[Investigation]: ",color:green},{color:white,selector:"@a[tag=investigate]"},{color:red,text:" kills for an unjust cause"}]
 execute if data storage w:temp clue{subtype:"evil"} run tellraw @s [{text:"[Investigation]: ",color:green},{color:white,selector:"@a[tag=investigate]"},{color:red,text:" is evil"}]
 execute if data storage w:temp clue{subtype:"none"} run tellraw @s [{text:"[Investigation]: ",color:green},{color:white,text:"There is nothing interesting about "},{color:white,selector:"@a[tag=investigate]"}]
 

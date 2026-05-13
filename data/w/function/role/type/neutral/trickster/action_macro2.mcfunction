@@ -1,0 +1,1 @@
+$tellraw @s [{"text":"The role of ","color":"white"},{"selector":"@a[tag=player_$(target)]","color":"yellow"},{"text":" is $(display).","color":"white"}]

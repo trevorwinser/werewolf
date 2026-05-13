@@ -55,3 +55,5 @@ execute as @a[tag=!blocked,tag=!spectator,tag=deputy] run function w:role/handle
 execute as @a[tag=!blocked,tag=!spectator,tag=detective] run function w:role/handle {path:"action"}
 
 execute as @a[tag=!blocked,tag=!spectator,tag=mayor] run function w:role/handle {path:"action"}
+
+execute as @a[tag=!blocked,tag=!spectator,tag=trickster] run function w:role/handle {path:"action"}

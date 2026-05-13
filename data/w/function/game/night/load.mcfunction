@@ -1,4 +1,10 @@
+execute if score .total judgement matches ..-1 if score @n[tag=trickster] judgement matches -1 run scoreboard players add @a[tag=trickster,tag=!spectator] role_uses 1
+
+execute as @n[tag=trickster] if score @s role_uses matches 3 run tag @s add won
+execute as @n[tag=trickster] if score @s role_uses matches 3 run function w:game/help/die {reason:"successfully tricked the vote 3 times"}
+
 execute if score .total judgement matches ..-1 as @a[tag=trial] run function w:game/help/die {reason:"was voted out of the town"}
+
 tag @a remove trial
 scoreboard players set .total judgement 0
 scoreboard objectives setdisplay sidebar

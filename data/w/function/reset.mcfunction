@@ -67,3 +67,5 @@ tag @a remove fed
 tag @a remove well_fed
 tag @a remove sick
 tag @a remove healed
+
+tag @a remove add_time

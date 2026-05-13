@@ -285,6 +285,21 @@ You can see who you have doused.
 Goal:
 Live to see the world burn.
 
+---
+
+Angel (WIP)
+
+Abilities:
+Purify all who would kill.
+
+Attributes:
+Visit a player each night.
+If that player is a killing role, they will die.
+You will know how many killers remain.
+
+Goal:
+Purify all killers including yourself.
+
 
 ## Neutral (Evil)
 
@@ -315,10 +330,21 @@ Be voted out at any cost.
 
 ---
 
+Trickster (WIP)
+
+Abilities:
+Manipulate & Deceive.
+
+Attributes:
+Learn one player's role each night.
+
+Goal:
+Be responsible for three voteouts.
+
 
 ## Neutral (Chaos)
 
-Pandora (WIP)
+Pandora (TBA)
 
 Abilities:
 Receive the power of a random role each night.
@@ -343,3 +369,16 @@ Goal:
 Survive to the end of the game.
 
 ---
+
+Weatherman (WIP)
+
+Abilities
+Control the weather.
+
+Attributes:
+Making it rain will block random player visit actions.
+Making it thunder will kill a random player (potentially yourself).
+
+
+Goal:
+Cause 5 weather events.
